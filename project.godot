@@ -50,6 +50,8 @@ directories/dtl_directory={
 "houseNRA": "res://Timelines/dialogues/houseNRA.dtl",
 "investigate": "res://Timelines/prompts/investigate.dtl",
 "investigation1": "res://Timelines/investigation/investigation1.dtl",
+"investigation2": "res://Timelines/investigation/investigation2.dtl",
+"investigation3": "res://Timelines/investigation/investigation3.dtl",
 "karenFur": "res://Timelines/interactions/karenFur.dtl",
 "karenPoison": "res://Timelines/interactions/karenPoison.dtl",
 "night1": "res://Timelines/night1/night1.dtl",
