@@ -41,6 +41,8 @@ directories/dtl_directory={
 "day1": "res://Timelines/day1/day1.dtl",
 "day2": "res://Timelines/day2/day2.dtl",
 "day2outside": "res://Timelines/day2/day2outside.dtl",
+"day5": "res://Timelines/day5/day5.dtl",
+"day5outside": "res://Timelines/day5/day5outside.dtl",
 "enterHouse": "res://Timelines/prompts/enterHouse.dtl",
 "exitHouse": "res://Timelines/prompts/exitHouse.dtl",
 "houseAstronaut": "res://Timelines/dialogues/houseAstronaut.dtl",
@@ -52,11 +54,14 @@ directories/dtl_directory={
 "investigation1": "res://Timelines/investigation/investigation1.dtl",
 "investigation2": "res://Timelines/investigation/investigation2.dtl",
 "investigation3": "res://Timelines/investigation/investigation3.dtl",
+"investigation4": "res://Timelines/investigation/investigation4.dtl",
 "karenFur": "res://Timelines/interactions/karenFur.dtl",
 "karenPoison": "res://Timelines/interactions/karenPoison.dtl",
 "night1": "res://Timelines/night1/night1.dtl",
 "night1Outside": "res://Timelines/night1/night1Outside.dtl",
-"night1Scales": "res://Timelines/night1/night1Scales.dtl"
+"night1Scales": "res://Timelines/night1/night1Scales.dtl",
+"night5": "res://Timelines/night5/night5.dtl",
+"playerDeath": "res://Timelines/playerDeath.dtl"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -75,7 +80,7 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/style_list=["res://Style/style.tres"]
+layout/style_list=["res://Style/style.tres", "res://balao.tres", "res://normal.tres"]
 layout/default_style="res://Style/style.tres"
 variables={
 "killed": "Dead Guy",
