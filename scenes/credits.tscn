@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs25cpy8gpl2q"]
+
+[ext_resource type="Script" path="res://scenes/credits.gd" id="1_1w7aa"]
+[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="1_5wnis"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1w7aa")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 110
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/MarginContainer"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[center]
+[b]The OG 51st Inhabitants:[/b]
+
+Mariana Santos
+Sebastião Carvalho
+Tiago Antunes[center]"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 513.0
+offset_right = 661.0
+offset_bottom = 641.0
+scale = Vector2(0.720001, 0.720001)
+texture_normal = ExtResource("1_5wnis")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
