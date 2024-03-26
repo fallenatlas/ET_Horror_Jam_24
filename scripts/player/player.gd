@@ -46,7 +46,7 @@ func handle_y_movement() -> bool:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		
-	return true
+	return direction_y != 0
 	
 func disable_y_movement():
 	move_on_y = false
