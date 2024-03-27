@@ -1,0 +1,33 @@
+join player 1
+player: Good morning everyone. Did anyone hear any strange noises yesterday at night?
+join Karen 3 [ mirrored="true"]
+Karen: Don't even say anything! I couldn't sleep at all.
+player: I Looked and found this outside.
+leave Karen
+join Astronaut 3 [ mirrored="true"]
+Astronaut: Where did you find this?
+player: It was on the street last night. I heard some strange noises, and when I went to check them out I found this.
+Astronaut: Oh no… This is really bad…
+player: What’s bad? Do you know what this is?
+Astronaut: Unfortunately, I have come across that in the past.
+player: Where have you seen this before?
+Astronaut: In space… That thing came from an alien…
+player: An alien? You're joking right?
+leave player
+join  1
+CT: AN ALIEN ?????? WE ARE ALL GOING TO DIE!!!!
+leave 
+join  1
+Karen: Explain yourself Mr Johnson!
+Astronaut: A few years ago, I was on a space station and we received a weird signal from somewhere nearby. It turned out to come from a small asteroid that was passing near our planet.
+Astronaut: When we arrived, there were extraterrestrial beings, and they attacked our crew. What scared us the most, was that they could change their appearances to human beings they have eaten…
+leave 
+join  1
+CT: EVERYONE FOR THEMSELVES!!!
+leave 
+join player 1
+player: If that is the case, we should get the police involved and ask for help.
+leave 
+join  1
+We can only get involved if you have solid evidence of alien presence, and who the alien is. Until then, good luck kid.
+player: I knew the police wouldn’t believe me. Maybe I really need to find the alien on my own.

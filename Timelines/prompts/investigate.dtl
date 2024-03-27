@@ -1,0 +1,5 @@
+Do you want to investigate the house?
+- Yes
+	[wait time="1.5"]
+	[signal arg="investigate"]
+- No
