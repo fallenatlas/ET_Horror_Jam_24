@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsreh6ik0lf04"]
+
+[ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_raw3p"]
+[ext_resource type="Texture2D" uid="uid://d08ju61dtkoob" path="res://assets/backyards/IMG_2536.png" id="2_vb7dh"]
+[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_wgy0u"]
+
+[node name="KarenBackyard" type="Node2D"]
+script = ExtResource("1_raw3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vb7dh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 455.0
+offset_top = -116.0
+offset_right = 583.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.400001, 0.400001)
+texture_normal = ExtResource("3_wgy0u")
+
+[connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
