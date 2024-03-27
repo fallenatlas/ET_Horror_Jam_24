@@ -45,6 +45,7 @@ directories/dtl_directory={
 "day5outside": "res://Timelines/day5/day5outside.dtl",
 "enterHouse": "res://Timelines/prompts/enterHouse.dtl",
 "exitHouse": "res://Timelines/prompts/exitHouse.dtl",
+"falseAccusation": "res://Timelines/falseAccusation.dtl",
 "houseAstronaut": "res://Timelines/dialogues/houseAstronaut.dtl",
 "houseCT": "res://Timelines/dialogues/houseCT.dtl",
 "houseCouple": "res://Timelines/dialogues/houseCouple.dtl",
