@@ -55,3 +55,10 @@ func _change_day_and_night():
 	if (day_or_night == "night"):
 		current_day += 1
 	day_or_night = "night" if day_or_night == "day" else "day"
+
+
+func _on_input_event(viewport, event, shape_idx):
+	print("a")
+	print_debug("a")
+	if (event is InputEventMouseButton && event.pressed):
+		print_debug("click")
