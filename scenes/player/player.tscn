@@ -1,0 +1,130 @@
+[gd_scene load_steps=19 format=3 uid="uid://bywfvf3mwlcdn"]
+
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_uhg2x"]
+[ext_resource type="Texture2D" uid="uid://66bri45oqo7q" path="res://assets/characters/player/12.png" id="2_8m15w"]
+[ext_resource type="Texture2D" uid="uid://81nync6aht3j" path="res://assets/characters/player/1.png" id="3_q2iga"]
+[ext_resource type="Texture2D" uid="uid://ch285okt61sqr" path="res://assets/characters/player/2.png" id="4_6c5sl"]
+[ext_resource type="Texture2D" uid="uid://bl0nbgrrrslnm" path="res://assets/characters/player/3.png" id="5_y0lq0"]
+[ext_resource type="Texture2D" uid="uid://pujg6jeutahw" path="res://assets/characters/player/4.png" id="6_0hjpo"]
+[ext_resource type="Texture2D" uid="uid://gyy36j70l4m0" path="res://assets/characters/player/5.png" id="7_odadn"]
+[ext_resource type="Texture2D" uid="uid://dvyyevc0vh1sl" path="res://assets/characters/player/6.png" id="8_t5i8f"]
+[ext_resource type="Texture2D" uid="uid://bbq6drhtkn4qq" path="res://assets/characters/player/7.png" id="9_bse57"]
+[ext_resource type="Texture2D" uid="uid://mm2nq7f7ksv1" path="res://assets/characters/player/8.png" id="10_l4ucb"]
+[ext_resource type="Texture2D" uid="uid://my28hb2qkggt" path="res://assets/characters/player/9.png" id="11_gd52s"]
+[ext_resource type="Texture2D" uid="uid://bmqtmu2judrsa" path="res://assets/characters/player/10.png" id="12_r7r2n"]
+[ext_resource type="Texture2D" uid="uid://bm2kxvyhuxrk5" path="res://assets/characters/player/11.png" id="13_g82mt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yeqt7"]
+radius = 89.0
+height = 728.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cc537"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8m15w")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q2iga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6c5sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y0lq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0hjpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_odadn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t5i8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bse57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_l4ucb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gd52s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r7r2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_g82mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8m15w")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_if80r"]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_tx4xc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5dxci"]
+_data = {
+"Idle": SubResource("Animation_if80r"),
+"RESET": SubResource("Animation_tx4xc")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_uhg2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_yeqt7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.454448, 0.454448)
+sprite_frames = SubResource("SpriteFrames_cc537")
+animation = &"Idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -144)
+zoom = Vector2(0.605, 0.605)
+limit_left = -3350
+limit_right = 3350
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5dxci")
+}
