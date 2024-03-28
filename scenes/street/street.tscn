@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dif5pc5nhk4pc"]
+[gd_scene load_steps=9 format=3 uid="uid://dif5pc5nhk4pc"]
 
 [ext_resource type="Script" path="res://scripts/street/street.gd" id="1_0wohs"]
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
 [ext_resource type="PackedScene" uid="uid://bywfvf3mwlcdn" path="res://scenes/player/player.tscn" id="3_cv8og"]
+[ext_resource type="PackedScene" uid="uid://cft8xi8ojtc1a" path="res://backyard_box.tscn" id="4_m0bra"]
+[ext_resource type="Script" path="res://scripts/backyards/backyard_door.gd" id="5_fr73m"]
+[ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://resources/backyards/couple.tres" id="6_ke5bg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjw7d"]
 size = Vector2(73, 1077)
@@ -44,4 +47,10 @@ position = Vector2(3054.5, -114)
 [node name="Dumpster" type="CollisionShape2D" parent="Dumpster"]
 shape = SubResource("RectangleShape2D_1lh14")
 
+[node name="CoupleBackyard" parent="." instance=ExtResource("4_m0bra")]
+position = Vector2(-980, -215)
+script = ExtResource("5_fr73m")
+info = ExtResource("6_ke5bg")
+
 [connection signal="input_event" from="Dumpster" to="." method="_on_dumpster_input_event"]
+[connection signal="input_event" from="CoupleBackyard" to="CoupleBackyard" method="_on_input_event"]

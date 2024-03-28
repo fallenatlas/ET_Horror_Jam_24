@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Backyard_Resource" load_steps=2 format=3 uid="uid://eppqu4usonje"]
+
+[ext_resource type="Script" path="res://scripts/backyards/backyard_resource.gd" id="1_4acsw"]
+
+[resource]
+script = ExtResource("1_4acsw")
+first_time = true
+owner = "astronaut"
