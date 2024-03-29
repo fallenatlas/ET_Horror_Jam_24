@@ -1,17 +1,38 @@
-[gd_scene load_steps=9 format=3 uid="uid://dif5pc5nhk4pc"]
+[gd_scene load_steps=18 format=3 uid="uid://dif5pc5nhk4pc"]
 
 [ext_resource type="Script" path="res://scripts/street/street.gd" id="1_0wohs"]
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
 [ext_resource type="PackedScene" uid="uid://bywfvf3mwlcdn" path="res://scenes/player/player.tscn" id="3_cv8og"]
 [ext_resource type="PackedScene" uid="uid://cft8xi8ojtc1a" path="res://backyard_box.tscn" id="4_m0bra"]
-[ext_resource type="Script" path="res://scripts/backyards/backyard_door.gd" id="5_fr73m"]
+[ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://resources/backyards/karen.tres" id="6_gd66b"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://resources/backyards/couple.tres" id="6_ke5bg"]
+[ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://resources/backyards/nra.tres" id="7_4a2hb"]
+[ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://resources/backyards/astronaut.tres" id="8_jwnxi"]
+[ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://resources/backyards/ct.tres" id="9_v4wku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjw7d"]
 size = Vector2(73, 1077)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1lh14"]
 size = Vector2(339, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amfkp"]
+size = Vector2(792, 225)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ynj1"]
+size = Vector2(589.875, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11dl6"]
+size = Vector2(96, 198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6piu"]
+size = Vector2(519.719, 198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_453il"]
+size = Vector2(668, 189)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7q7ep"]
+size = Vector2(908, 177)
 
 [node name="Street" type="Node2D"]
 script = ExtResource("1_0wohs")
@@ -49,8 +70,61 @@ shape = SubResource("RectangleShape2D_1lh14")
 
 [node name="CoupleBackyard" parent="." instance=ExtResource("4_m0bra")]
 position = Vector2(-980, -215)
-script = ExtResource("5_fr73m")
 info = ExtResource("6_ke5bg")
+
+[node name="Backyard" parent="CoupleBackyard" index="0"]
+position = Vector2(54, -7.5)
+shape = SubResource("RectangleShape2D_amfkp")
+
+[node name="KarenBackyard" parent="." instance=ExtResource("4_m0bra")]
+info = ExtResource("6_gd66b")
+
+[node name="Backyard" parent="KarenBackyard" index="0"]
+position = Vector2(953.063, -15)
+shape = SubResource("RectangleShape2D_2ynj1")
+
+[node name="NRABackyard" parent="." instance=ExtResource("4_m0bra")]
+position = Vector2(1526, -126)
+info = ExtResource("7_4a2hb")
+
+[node name="Backyard" parent="NRABackyard" index="0"]
+position = Vector2(416, 6)
+shape = SubResource("RectangleShape2D_11dl6")
+
+[node name="AstronautBackyard" parent="." instance=ExtResource("4_m0bra")]
+position = Vector2(2500, -402)
+info = ExtResource("8_jwnxi")
+
+[node name="Backyard" parent="AstronautBackyard" index="0"]
+position = Vector2(34.1406, 266)
+shape = SubResource("RectangleShape2D_u6piu")
+
+[node name="CTBackyard" parent="." instance=ExtResource("4_m0bra")]
+position = Vector2(-2808, -231)
+info = ExtResource("9_v4wku")
+
+[node name="Backyard" parent="CTBackyard" index="0"]
+position = Vector2(8.00024, 1.5)
+shape = SubResource("RectangleShape2D_453il")
+
+[node name="PlayerHouse" parent="." instance=ExtResource("4_m0bra")]
+position = Vector2(-1910, -215)
+script = null
+
+[node name="Backyard" parent="PlayerHouse" index="0"]
+position = Vector2(10, -4.5)
+shape = SubResource("RectangleShape2D_7q7ep")
 
 [connection signal="input_event" from="Dumpster" to="." method="_on_dumpster_input_event"]
 [connection signal="input_event" from="CoupleBackyard" to="CoupleBackyard" method="_on_input_event"]
+[connection signal="input_event" from="KarenBackyard" to="KarenBackyard" method="_on_input_event"]
+[connection signal="input_event" from="NRABackyard" to="NRABackyard" method="_on_input_event"]
+[connection signal="input_event" from="AstronautBackyard" to="AstronautBackyard" method="_on_input_event"]
+[connection signal="input_event" from="CTBackyard" to="CTBackyard" method="_on_input_event"]
+
+[editable path="CoupleBackyard"]
+[editable path="KarenBackyard"]
+[editable path="NRABackyard"]
+[editable path="AstronautBackyard"]
+[editable path="CTBackyard"]
+[editable path="PlayerHouse"]
