@@ -1,9 +1,10 @@
 [gd_resource type="Resource" script_class="InteractableObject" load_steps=3 format=3 uid="uid://dml2o7hixfyje"]
 
 [ext_resource type="Texture2D" uid="uid://dlwf063jjcjuv" path="res://assets/characters/couple/IMG_2504.png" id="1_8nno8"]
-[ext_resource type="Script" path="res://scripts/backyards/object.gd" id="1_hn33h"]
+[ext_resource type="Script" path="res://scripts/objects/interactable_object_resource.gd" id="1_hn33h"]
 
 [resource]
 script = ExtResource("1_hn33h")
 found = true
 art = ExtResource("1_8nno8")
+name = ""

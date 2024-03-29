@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_0gc08"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="2_1awxl"]
-[ext_resource type="Texture2D" uid="uid://4gtbqksd5wcr" path="res://assets/backyards/IMG_2533.png" id="2_h8o3m"]
+[ext_resource type="Texture2D" uid="uid://ddyhaat3eekyv" path="res://assets/backyards/ctBackyard.png" id="3_v5h1j"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_yjre1"]
 
 [node name="KarenBackyard" type="Node2D"]
@@ -10,7 +10,7 @@ script = ExtResource("1_0gc08")
 info = ExtResource("2_1awxl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_h8o3m")
+texture = ExtResource("3_v5h1j")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)

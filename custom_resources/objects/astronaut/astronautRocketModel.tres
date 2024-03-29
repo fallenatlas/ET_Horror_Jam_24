@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InteractableObject" load_steps=3 format=3 uid="uid://58gf7pewp4uc"]
+
+[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="1_m6vf0"]
+[ext_resource type="Script" path="res://scripts/objects/interactable_object_resource.gd" id="2_larqg"]
+
+[resource]
+script = ExtResource("2_larqg")
+found = false
+art = ExtResource("1_m6vf0")
+dialog_name = "astronautRocketModel"

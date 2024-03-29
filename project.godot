@@ -57,6 +57,7 @@ directories/dtl_directory={
 "investigation4": "res://Timelines/investigation/investigation4.dtl",
 "karenFur": "res://Timelines/interactions/karenFur.dtl",
 "karenHouse": "res://Timelines/dialogues/karenHouse.dtl",
+"karenPainting": "res://Timelines/interactions/karenPainting.dtl",
 "karenPoison": "res://Timelines/interactions/karenPoison.dtl",
 "night1": "res://Timelines/night1/night1.dtl",
 "night1Outside": "res://Timelines/night1/night1Outside.dtl",

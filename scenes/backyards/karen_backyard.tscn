@@ -1,16 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://lg306ae4ij8v"]
+[gd_scene load_steps=8 format=3 uid="uid://lg306ae4ij8v"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_uo5qh"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="2_1wbhq"]
-[ext_resource type="Texture2D" uid="uid://b1q1pftu1cxs5" path="res://assets/backyards/IMG_2532.png" id="2_p6upu"]
+[ext_resource type="Texture2D" uid="uid://d4bqlnykt6bu8" path="res://assets/backyards/karenBackyard.png" id="3_ckosd"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_xtcof"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="5_rsylx"]
+[ext_resource type="Resource" uid="uid://pufgkpkxnaqt" path="res://custom_resources/objects/karen/karenPainting.tres" id="6_gynik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hxco"]
+size = Vector2(387, 115)
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_uo5qh")
 info = ExtResource("2_1wbhq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_p6upu")
+texture = ExtResource("3_ckosd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)
@@ -32,4 +37,13 @@ grow_vertical = 0
 scale = Vector2(0.400001, 0.400001)
 texture_normal = ExtResource("3_xtcof")
 
+[node name="InteractableBox" parent="." instance=ExtResource("5_rsylx")]
+info = ExtResource("6_gynik")
+
+[node name="CollisionShape2D" parent="InteractableBox" index="0"]
+position = Vector2(211.5, -78.5)
+shape = SubResource("RectangleShape2D_2hxco")
+
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
+
+[editable path="InteractableBox"]

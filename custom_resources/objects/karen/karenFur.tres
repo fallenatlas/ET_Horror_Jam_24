@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InteractableObject" load_steps=3 format=3 uid="uid://i6u3cnt1lprh"]
+
+[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="1_ywnq3"]
+[ext_resource type="Script" path="res://scripts/objects/interactable_object_resource.gd" id="2_aiiio"]
+
+[resource]
+script = ExtResource("2_aiiio")
+found = false
+art = ExtResource("1_ywnq3")
+dialog_name = "karenFur"

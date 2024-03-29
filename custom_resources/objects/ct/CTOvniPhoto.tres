@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InteractableObject" load_steps=3 format=3 uid="uid://cylcj3rcton0u"]
+
+[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="1_26yje"]
+[ext_resource type="Script" path="res://scripts/objects/interactable_object_resource.gd" id="2_dkt76"]
+
+[resource]
+script = ExtResource("2_dkt76")
+found = false
+art = ExtResource("1_26yje")
+dialog_name = "CTOvniPhoto"
