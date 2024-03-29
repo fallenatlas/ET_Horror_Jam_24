@@ -16,8 +16,10 @@ var pronoun_map = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	suspicion = game_state.suspicion
+	print_debug(game_state.day_or_night + str(game_state.current_day))
 	Dialogic.signal_event.connect(_on_signal_event)
 	get_node("Player").disable_y_movement()
+	Dialogic.start(_get_prefix() + "outside")
 
 func _on_signal_event(argument : String):
 	match argument:
@@ -25,6 +27,9 @@ func _on_signal_event(argument : String):
 			_investigate()
 		"enterHouse":
 			_enter_house()
+
+func _get_prefix():
+	return game_state.day_or_night + str(game_state.current_day)
 
 func _investigate():
 	suspicion += 1

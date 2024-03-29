@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="GameStateResource" load_steps=2 format=3 uid="uid://bcyf3fsoo2glv"]
 
-[ext_resource type="Script" path="res://scripts/game_state_resource.gd" id="1_8tltb"]
+[ext_resource type="Script" path="res://scripts/game_state_resource.gd" id="1_2jle6"]
 
 [resource]
-script = ExtResource("1_8tltb")
+script = ExtResource("1_2jle6")
 current_day = 1
 day_or_night = "day"
+suspicion = 0

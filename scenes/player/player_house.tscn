@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://d3yrhdr34bure"]
+[gd_scene load_steps=18 format=3 uid="uid://d3yrhdr34bure"]
 
 [ext_resource type="Script" path="res://scripts/player/player_house.gd" id="1_tc0cl"]
+[ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_8p30u"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="2_78cl7"]
 [ext_resource type="Texture2D" uid="uid://bwmactn6lx428" path="res://assets/player_house/IMG_2543.png" id="2_gw5nf"]
 [ext_resource type="Texture2D" uid="uid://cqplpng6gr1de" path="res://assets/characters/ct/IMG_2501.png" id="3_c73bt"]
@@ -33,6 +34,7 @@ fill_from = Vector2(0.5, 0.5)
 
 [node name="EvidenceBoard" type="Node2D"]
 script = ExtResource("1_tc0cl")
+game_state = ExtResource("2_8p30u")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("2_gw5nf")
