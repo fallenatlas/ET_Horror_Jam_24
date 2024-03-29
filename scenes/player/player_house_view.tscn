@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dagkfrk8x83wq"]
+
+[ext_resource type="Texture2D" uid="uid://cngvcruxkjxt3" path="res://assets/player_house/player_house.png" id="1_7gi6r"]
+[ext_resource type="Script" path="res://scripts/player/player_house_view.gd" id="1_11hon"]
+[ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_43vpj"]
+[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="2_au67o"]
+
+[node name="PlayerHouseView" type="Node2D"]
+script = ExtResource("1_11hon")
+game_state = ExtResource("2_43vpj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7gi6r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 455.0
+offset_top = -116.0
+offset_right = 583.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.400001, 0.400001)
+texture_normal = ExtResource("2_au67o")
+
+[connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]

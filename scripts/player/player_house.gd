@@ -27,4 +27,4 @@ func _on_exit_button_pressed():
 	pass # Replace with function body.
 	#go to next day/night...
 	#probably change something, maybe game_manager.next_scene()
-	get_tree().change_scene_to_file("res://scenes/street/street.tscn")
+	get_tree().change_scene_to_file("res://scenes/player/player_house_view.tscn")

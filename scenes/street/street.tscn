@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dif5pc5nhk4pc"]
+[gd_scene load_steps=19 format=3 uid="uid://dif5pc5nhk4pc"]
 
 [ext_resource type="Script" path="res://scripts/street/street.gd" id="1_0wohs"]
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
+[ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_xxe25"]
 [ext_resource type="PackedScene" uid="uid://bywfvf3mwlcdn" path="res://scenes/player/player.tscn" id="3_cv8og"]
 [ext_resource type="PackedScene" uid="uid://cft8xi8ojtc1a" path="res://scenes/backyards/backyard_box.tscn" id="4_m0bra"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_gd66b"]
@@ -36,6 +37,7 @@ size = Vector2(908, 177)
 
 [node name="Street" type="Node2D"]
 script = ExtResource("1_0wohs")
+game_state = ExtResource("2_xxe25")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
