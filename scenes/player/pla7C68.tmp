@@ -1,0 +1,233 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3yrhdr34bure"]
+
+[ext_resource type="Texture2D" uid="uid://cnqxrmt1guosi" path="res://assets/player_house/IMG_2537.png" id="1_r8lsc"]
+[ext_resource type="Script" path="res://scripts/player/player_house.gd" id="1_tc0cl"]
+[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="2_78cl7"]
+[ext_resource type="Texture2D" uid="uid://cqplpng6gr1de" path="res://assets/characters/ct/IMG_2501.png" id="3_c73bt"]
+[ext_resource type="Script" path="res://scenes/player/characters.gd" id="4_ebmus"]
+[ext_resource type="Script" path="res://scripts/player/character_toggle.gd" id="5_4kjnd"]
+[ext_resource type="Script" path="res://scenes/player/objects.gd" id="6_65r3x"]
+[ext_resource type="Script" path="res://scripts/player/object_toggle.gd" id="6_r0wbb"]
+
+[node name="EvidenceBoard" type="Node2D"]
+script = ExtResource("1_tc0cl")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_r8lsc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+
+[node name="CallButton" type="TextureButton" parent="."]
+offset_left = -820.0
+offset_top = -423.0
+offset_right = -692.0
+offset_bottom = -295.0
+texture_normal = ExtResource("2_78cl7")
+
+[node name="ExitButton" type="TextureButton" parent="."]
+offset_left = 763.0
+offset_top = -445.0
+offset_right = 891.0
+offset_bottom = -317.0
+texture_normal = ExtResource("2_78cl7")
+
+[node name="Characters" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_ebmus")
+
+[node name="CTToggle" type="TextureButton" parent="Characters"]
+layout_mode = 0
+offset_left = -481.0
+offset_top = 101.0
+offset_right = 1187.0
+offset_bottom = 2325.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("5_4kjnd")
+
+[node name="CoupleToggle" type="TextureButton" parent="Characters"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 101.0
+offset_right = 1418.0
+offset_bottom = 2325.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+
+[node name="KarenToggle" type="TextureButton" parent="Characters"]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 101.0
+offset_right = 1643.0
+offset_bottom = 2325.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+
+[node name="NRAToggle" type="TextureButton" parent="Characters"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 101.0
+offset_right = 1822.0
+offset_bottom = 2325.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+
+[node name="AstronautToggle" type="TextureButton" parent="Characters"]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 101.0
+offset_right = 2015.0
+offset_bottom = 2325.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+
+[node name="Objects" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_65r3x")
+
+[node name="ScalesToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = -602.0
+offset_top = -376.0
+offset_right = 1066.0
+offset_bottom = 1848.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="SpaceRockToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = -653.0
+offset_top = -147.0
+offset_right = 1015.0
+offset_bottom = 2077.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="DrawingToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = -395.0
+offset_right = 1348.0
+offset_bottom = 1829.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="RocketToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = -447.0
+offset_top = -200.0
+offset_right = 1221.0
+offset_bottom = 2024.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="FurToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = -66.0
+offset_top = -420.0
+offset_right = 1602.0
+offset_bottom = 1804.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="RatPoisonToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = -197.0
+offset_top = -202.0
+offset_right = 1471.0
+offset_bottom = 2022.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="NewspaperToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = -230.0
+offset_right = 1723.0
+offset_bottom = 1994.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="OvniPhotoToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = -401.0
+offset_right = 1859.0
+offset_bottom = 1823.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="GooToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = -191.0
+offset_right = 1950.0
+offset_bottom = 2033.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="PaintingToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = 436.0
+offset_top = -405.0
+offset_right = 2104.0
+offset_bottom = 1819.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[node name="MetalToggle" type="TextureButton" parent="Objects"]
+layout_mode = 0
+offset_left = 485.0
+offset_top = -158.0
+offset_right = 2153.0
+offset_bottom = 2066.0
+scale = Vector2(0.0800018, 0.0800018)
+toggle_mode = true
+texture_normal = ExtResource("3_c73bt")
+script = ExtResource("6_r0wbb")
+
+[connection signal="pressed" from="CallButton" to="." method="_on_call_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="toggled" from="Objects/ScalesToggle" to="Objects/ScalesToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/SpaceRockToggle" to="Objects/SpaceRockToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/DrawingToggle" to="Objects/DrawingToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/RocketToggle" to="Objects/RocketToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/FurToggle" to="Objects/FurToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/RatPoisonToggle" to="Objects/RatPoisonToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/NewspaperToggle" to="Objects/NewspaperToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/OvniPhotoToggle" to="Objects/OvniPhotoToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/GooToggle" to="Objects/GooToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/PaintingToggle" to="Objects/PaintingToggle" method="_on_toggled"]
+[connection signal="toggled" from="Objects/MetalToggle" to="Objects/MetalToggle" method="_on_toggled"]

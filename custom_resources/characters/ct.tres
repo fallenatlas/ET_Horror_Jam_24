@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterState" load_steps=3 format=3 uid="uid://elp1bjj3yyw6"]
+
+[ext_resource type="Texture2D" uid="uid://cqplpng6gr1de" path="res://assets/characters/ct/IMG_2501.png" id="1_3k4rk"]
+[ext_resource type="Script" path="res://scripts/character_state.gd" id="1_xt8hh"]
+
+[resource]
+script = ExtResource("1_xt8hh")
+alive = false
+art = ExtResource("1_3k4rk")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InteractableObject" load_steps=3 format=3 uid="uid://camt4h12tnols"]
+
+[ext_resource type="Script" path="res://scripts/backyards/object.gd" id="1_0yeln"]
+[ext_resource type="Texture2D" uid="uid://cqplpng6gr1de" path="res://assets/characters/ct/IMG_2501.png" id="1_m1cgb"]
+
+[resource]
+script = ExtResource("1_0yeln")
+found = false
+art = ExtResource("1_m1cgb")
