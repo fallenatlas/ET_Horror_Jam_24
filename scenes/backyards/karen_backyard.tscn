@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://lg306ae4ij8v"]
+[gd_scene load_steps=5 format=3 uid="uid://lg306ae4ij8v"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_uo5qh"]
+[ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="2_1wbhq"]
 [ext_resource type="Texture2D" uid="uid://b1q1pftu1cxs5" path="res://assets/backyards/IMG_2532.png" id="2_p6upu"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_xtcof"]
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_uo5qh")
+info = ExtResource("2_1wbhq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_p6upu")

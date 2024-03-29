@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://scripts/street/street.gd" id="1_0wohs"]
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
 [ext_resource type="PackedScene" uid="uid://bywfvf3mwlcdn" path="res://scenes/player/player.tscn" id="3_cv8og"]
-[ext_resource type="PackedScene" uid="uid://cft8xi8ojtc1a" path="res://backyard_box.tscn" id="4_m0bra"]
-[ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://resources/backyards/karen.tres" id="6_gd66b"]
-[ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://resources/backyards/couple.tres" id="6_ke5bg"]
-[ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://resources/backyards/nra.tres" id="7_4a2hb"]
-[ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://resources/backyards/astronaut.tres" id="8_jwnxi"]
-[ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://resources/backyards/ct.tres" id="9_v4wku"]
+[ext_resource type="PackedScene" uid="uid://cft8xi8ojtc1a" path="res://scenes/backyards/backyard_box.tscn" id="4_m0bra"]
+[ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_gd66b"]
+[ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="6_ke5bg"]
+[ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="7_4a2hb"]
+[ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="8_jwnxi"]
+[ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="9_v4wku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjw7d"]
 size = Vector2(73, 1077)

@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsreh6ik0lf04"]
+[gd_scene load_steps=5 format=3 uid="uid://bsreh6ik0lf04"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_raw3p"]
 [ext_resource type="Texture2D" uid="uid://d08ju61dtkoob" path="res://assets/backyards/IMG_2536.png" id="2_vb7dh"]
+[ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="2_x6msp"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_wgy0u"]
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_raw3p")
+info = ExtResource("2_x6msp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_vb7dh")

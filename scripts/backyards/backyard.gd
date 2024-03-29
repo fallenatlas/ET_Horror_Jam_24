@@ -1,9 +1,14 @@
 extends Node2D
 
+@export var info : Backyard_Resource
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	#play dialog if first time
+	if info.first_time:
+		var dialog_name = info.owner + "House"
+		Dialogic.start(dialog_name)
+		info.first_time = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
