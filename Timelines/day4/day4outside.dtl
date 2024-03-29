@@ -1,4 +1,11 @@
+join Darla 2
 Darla: These aliens have to be stopped. With Joanne‘s death, they have already killed 2 members of our neighborhood.
+leave Darla
+join player 2
 player: I will shoot that goddamn alien if I have to.
+leave player
+join Matt 2
 Matt: Let’s not be so aggressive. The police aren’t going to do anything so we each should go home and protect ourselves. Alex, you are welcome to investigate but be careful.
+leave Matt
+join player 2
 player: Ok, I will.

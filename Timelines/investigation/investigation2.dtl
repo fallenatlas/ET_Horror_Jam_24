@@ -1,6 +1,15 @@
+join player 2
 player: Oh no! The alien killed {killed}! I need to call the police!
+leave player
+join Karen 2
 Karen: Of course… You again… Couldn’t sleep again hun?
+leave Karen
+join player 2
 player: Yes Charlotte, why are you so suspicious?
+leave player
+join Karen 2
 Karen: There’s a murderous alien freak on the loose!
 Karen: YOU CAN’T TRUST ANYONE!
+leave Karen
+join player 2
 player: Someone has to do something and just complaining won’t solve anything. Good night Charlotte.

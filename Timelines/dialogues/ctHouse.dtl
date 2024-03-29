@@ -1,10 +1,29 @@
+join CT 1
 CT: WE ARE ALL GOING TO DIE!
+leave CT
+join player 2
 player: Please, Joanne calm down!
+leave player
+join CT 2
 CT: It must be the government! They know I am close to the truth!
+leave CT
+join player 2
 player: …
+leave player
+join CT 2
 CT: Sorry, sorry. What do you want to talk about?
+leave CT
+join player 2
 player: I am just trying to find some evidence about the existence of the alien.
+leave player
+join CT 2
 CT: Feel free to look around. But be careful… They might be watching…
+leave CT
+join player 2
 player: You think the aliens are watching us right now?
+leave player
+join CT 2
 CT: No! The government spies!
+leave CT
+join player 2
 player: …

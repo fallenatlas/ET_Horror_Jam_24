@@ -1,5 +1,14 @@
+join player 2
 player: This is getting out of control. I need to figure it out quickly, or I may be next.
+leave player
+join Karen 2
 Karen: Caught in the act! Officers arrest this girl! She 's an alien!
+leave Karen
+join player 2
 player: What??? I was just investigating!!
+leave player
+join Karen 2
 Karen: You are going down, freak!!
+leave player
+join Karen 2
 You were arrested and taken to a government lab.

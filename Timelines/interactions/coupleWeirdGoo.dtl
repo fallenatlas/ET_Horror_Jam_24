@@ -1,2 +1,5 @@
+join player 2
 player: Ewww what is this?
-player: Sorry that is just a chemical compound I was building. One of my failed experiences. It’s not toxic, don't worry.
+leave player
+join Matt 2
+Matt: Sorry that is just a chemical compound I was building. One of my failed experiences. It’s not toxic, don't worry.

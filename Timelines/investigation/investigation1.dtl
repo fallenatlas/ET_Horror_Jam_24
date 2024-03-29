@@ -1,5 +1,12 @@
+join player 2
 player: OH MY GOD. {killed}!
 player: {pronoun} is really dead. I bet it was the alien. I should call the police and let them know.
+leave player
+join Karen 1
 Karen: So you found the body hun? Do you think that makes you less suspicious? It can’t be a coincidence that the alien only appeared when you arrived.
+leave Karen
+join player 1
 player: What? I was just taking a walk and found blood in Mr Johnson’s front yard.
+leave player
+join Karen 1
 Karen: I’ll have my eyes on you kid!

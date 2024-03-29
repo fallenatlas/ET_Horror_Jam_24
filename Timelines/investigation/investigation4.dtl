@@ -1,2 +1,11 @@
+join Darla 2
+...
+leave Darla
+join player 2
 player: So it was you Charlotte… I should have known. I already called the police, you are going down!
+leave player
+join Darla 2
+Darla: ...
+leave Darla
+join player 2
 player: I need to go home and call the police!

@@ -1,33 +1,52 @@
-join player 1
+join player 2
 player: Good morning everyone. Did anyone hear any strange noises yesterday at night?
-join Karen 3 [ mirrored="true"]
+leave player
+join Karen 2
 Karen: Don't even say anything! I couldn't sleep at all.
-player: I Looked and found this outside.
 leave Karen
-join Astronaut 3 [ mirrored="true"]
+join player 2
+player: I Looked and found this outside.
+leave player
+join Astronaut 2
 Astronaut: Where did you find this?
+leave Astronaut
+join player 2
 player: It was on the street last night. I heard some strange noises, and when I went to check them out I found this.
+leave player
+join Astronaut 2
 Astronaut: Oh no… This is really bad…
+leave Astronaut
+join player 2
 player: What’s bad? Do you know what this is?
+leave player
+join Astronaut 2
 Astronaut: Unfortunately, I have come across that in the past.
+leave Astronaut
+join player 2
 player: Where have you seen this before?
+leave player
+join Astronaut 2
 Astronaut: In space… That thing came from an alien…
+leave Astronaut
+join player 2
 player: An alien? You're joking right?
 leave player
-join  1
+join CT 2
 CT: AN ALIEN ?????? WE ARE ALL GOING TO DIE!!!!
-leave 
-join  1
+leave CT
+join Karen 2
 Karen: Explain yourself Mr Johnson!
+leave Karen
+join Astronaut 2
 Astronaut: A few years ago, I was on a space station and we received a weird signal from somewhere nearby. It turned out to come from a small asteroid that was passing near our planet.
 Astronaut: When we arrived, there were extraterrestrial beings, and they attacked our crew. What scared us the most, was that they could change their appearances to human beings they have eaten…
-leave 
-join  1
+leave Astronaut
+join CT 2
 CT: EVERYONE FOR THEMSELVES!!!
-leave 
-join player 1
+leave CT
+join player 2
 player: If that is the case, we should get the police involved and ask for help.
-leave 
-join  1
+leave player
 We can only get involved if you have solid evidence of alien presence, and who the alien is. Until then, good luck kid.
+join player 2
 player: I knew the police wouldn’t believe me. Maybe I really need to find the alien on my own.

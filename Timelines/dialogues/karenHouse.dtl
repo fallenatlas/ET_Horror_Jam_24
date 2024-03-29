@@ -1,5 +1,14 @@
+join Karen 2
 Karen: What are you doing in my house?
+leave Karen
+join player 2
 player: Sorry Charlotte, but I am investigating the alien case, and I wanted to search your house to see if I can find any evidence.
+leave player
+join Karen 2
 Karen: So you think I am the alien?? You kids are always so rude with older people. Have some respect!
+leave Karen
+join player 2
 player: I am not accusing you of anything, I am just looking for evidence of alien existence and trying to find who the alien is.
+leave player
+join Karen 2
 Karen: Fine, look around, just don’t bother me or I will call the police!
