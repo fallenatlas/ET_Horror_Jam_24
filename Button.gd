@@ -3,7 +3,6 @@ extends Node
 var day_limit = 5
 var current_day = 1
 var day_or_night = "day"
-var in_house = ""
 var suspicion = 0
 
 # Astronaut, CT, NRA, Karen
@@ -46,7 +45,7 @@ func _outside():
 	Dialogic.start(_get_prefix() + "Outside")
 	
 func _obj_dialog(obj : Node):
-	var prefix = in_house if in_house != "" else _get_prefix()
+	var prefix = _get_prefix()
 	Dialogic.start(prefix + obj.name)
 
 func _change_day_and_night():

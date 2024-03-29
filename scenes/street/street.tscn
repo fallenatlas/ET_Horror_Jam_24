@@ -121,6 +121,7 @@ shape = SubResource("RectangleShape2D_7q7ep")
 [connection signal="input_event" from="NRABackyard" to="NRABackyard" method="_on_input_event"]
 [connection signal="input_event" from="AstronautBackyard" to="AstronautBackyard" method="_on_input_event"]
 [connection signal="input_event" from="CTBackyard" to="CTBackyard" method="_on_input_event"]
+[connection signal="input_event" from="PlayerHouse" to="." method="_on_player_house_input_event"]
 
 [editable path="CoupleBackyard"]
 [editable path="KarenBackyard"]
