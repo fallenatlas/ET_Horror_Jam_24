@@ -1,4 +1,5 @@
-Do you want to go outside?
+Do you want to go outside? (Choosing "No" will skip to the next day)
 - Yes
 	[signal arg="exitHouse"]
 - No
+	[signal arg="sleep"]

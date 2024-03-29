@@ -10,6 +10,7 @@ var day_or_night
 func _ready():
 	current_day = game_state.current_day
 	day_or_night = game_state.day_or_night
+	print_debug(_get_prefix())
 	Dialogic.signal_event.connect(_on_signal_event)
 	_change_day_and_night()
 	
@@ -27,12 +28,15 @@ func _change_day_and_night():
 	if (day_or_night == "night"):
 		current_day += 1
 	day_or_night = "night" if day_or_night == "day" else "day"
+	game_state.current_day = current_day
+	game_state.day_or_night = day_or_night
+	print_debug(game_state.day_or_night + str(game_state.current_day))
 	var dialog_name = _get_prefix()
 	print_debug("changed to " + dialog_name)
 	Dialogic.start(dialog_name)
 	
 func _on_exit_button_pressed():
-	if day_or_night == "night":
+	if day_or_night == "night" && current_day != 1:
 		Dialogic.start("exitHouse")
 	else:
 		_exit_house()

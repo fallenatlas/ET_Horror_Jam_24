@@ -28,6 +28,7 @@ func _on_signal_event(argument : String):
 
 func _investigate():
 	suspicion += 1
+	game_state.suspicion = suspicion
 	var killed = death_array[ - 2] # day 2 corresponds to 1st element
 	Dialogic.VAR.killed = killed
 	Dialogic.VAR.pronoun = pronoun_map[killed]
@@ -43,7 +44,3 @@ func _on_player_house_input_event(viewport, event, shape_idx):
 
 func _enter_house():
 	get_tree().change_scene_to_file("res://scenes/player/player_house.tscn")
-	#_change_day_and_night()
-	
-
-	
