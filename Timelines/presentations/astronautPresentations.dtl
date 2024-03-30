@@ -1,11 +1,11 @@
-Darla: Hi dear! My name is Darla, I am the president of the homeowner's association. This is my husband Matt.
-Matt: Hello I am Matt! Welcome to the neighborhood!
-leave Darla
 join player 2
-player: Hello, I am Alex. I have baked you some cookies. Hope you like them!
+player: Hi sir. My name is Alex, how are you? I am your new neighbor.
 leave player
-join Darla 2
-Darla: Sorry my husband is allergic. But thank you dear!
-Darla: If you have any doubts or needs feel free to ask us dear!
-leave Darla
-join Darla 2
+join Astronaut 2
+Astronaut: Hello Alex. You can call me Mr Johnson. Welcome to the neighborhood.
+leave Astronaut
+join player 2
+player: Thank you! Would you like a freshly baked cookie?
+leave player
+join Astronaut 2
+Astronaut: Yes I would! Thank you very much Alex.

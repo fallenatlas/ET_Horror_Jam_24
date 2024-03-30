@@ -1,0 +1,12 @@
+join player 2
+player: Hello, my name is Alex. I am your new neighbor! Nice to meet you.
+leave player
+join Karen 2
+Karen: Oh, a kid. Of course it had to be a kid. Yeah yeah welcome, I am Charlotte.
+Karen: You better not make any noise or I will call the cops.
+leave Karen
+join player 2
+player: No I am very peaceful! Here, I have baked you some cookies if you would want one.
+leave player
+join Karen 2
+Karen: Sure kid. Thanks, I guess.

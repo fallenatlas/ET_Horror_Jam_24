@@ -8,7 +8,8 @@ extends Node2D
 func _ready():
 	#play dialog if first time
 	if state.current_day == 1:
-		Dialogic.start(info.owner + "Presentations")
+		if info.first_time_day:
+			Dialogic.start(info.owner + "Presentations")
 	elif info.first_time:
 		var dialog_name = info.owner + "House"
 		Dialogic.start(dialog_name)
