@@ -81,6 +81,7 @@ directories/dtl_directory={
 "night5": "res://Timelines/night5/night5.dtl",
 "nraHouse": "res://Timelines/dialogues/nraHouse.dtl",
 "nraPresentations": "res://Timelines/presentations/nraPresentations.dtl",
+"nraTaser": "res://Timelines/interactions/nraTaser.dtl",
 "playerDeath": "res://Timelines/playerDeath.dtl"
 }
 text/letter_speed=0.01

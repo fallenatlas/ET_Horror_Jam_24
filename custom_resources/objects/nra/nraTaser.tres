@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InteractableObject" load_steps=3 format=3 uid="uid://ddk8l4dcaobtt"]
+
+[ext_resource type="Texture2D" uid="uid://couq3fodbrqlw" path="res://assets/objects/nra/taser.png" id="1_engnu"]
+[ext_resource type="Script" path="res://scripts/objects/interactable_object_resource.gd" id="2_t5gb1"]
+
+[resource]
+script = ExtResource("2_t5gb1")
+found = false
+art = ExtResource("1_engnu")
+dialog_name = "nraTaser"

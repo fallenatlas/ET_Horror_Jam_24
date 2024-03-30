@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjhapqe2ttrgw"]
+[gd_scene load_steps=14 format=3 uid="uid://cjhapqe2ttrgw"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_tffod"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="2_td5p2"]
@@ -9,6 +9,12 @@
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="5_4tr51"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_fk8ts"]
 [ext_resource type="Texture2D" uid="uid://dynj48hav4cgm" path="res://assets/backyards/nraBackyard.png" id="8_yk0we"]
+[ext_resource type="Texture2D" uid="uid://couq3fodbrqlw" path="res://assets/objects/nra/taser.png" id="10_6ctk2"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="11_bfa33"]
+[ext_resource type="Resource" uid="uid://ddk8l4dcaobtt" path="res://custom_resources/objects/nra/nraTaser.tres" id="12_i7y6h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tqbo"]
+size = Vector2(79, 103)
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_tffod")
@@ -39,4 +45,19 @@ grow_vertical = 0
 scale = Vector2(0.400001, 0.400001)
 texture_normal = ExtResource("3_1jkqm")
 
+[node name="Taser" type="Sprite2D" parent="."]
+position = Vector2(-722, 95)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("10_6ctk2")
+
+[node name="TaserArea" parent="." instance=ExtResource("11_bfa33")]
+position = Vector2(-723, 68)
+info = ExtResource("12_i7y6h")
+
+[node name="CollisionShape2D" parent="TaserArea" index="0"]
+position = Vector2(10, 32)
+shape = SubResource("RectangleShape2D_3tqbo")
+
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
+
+[editable path="TaserArea"]

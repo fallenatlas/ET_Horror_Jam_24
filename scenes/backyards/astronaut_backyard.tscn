@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsreh6ik0lf04"]
+[gd_scene load_steps=17 format=3 uid="uid://bsreh6ik0lf04"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_raw3p"]
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="2_x6msp"]
@@ -9,6 +9,17 @@
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="5_oekyo"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="6_d32ih"]
 [ext_resource type="Texture2D" uid="uid://ggomwdn25vkd" path="res://assets/backyards/astronautBackyard.png" id="8_4sa18"]
+[ext_resource type="Texture2D" uid="uid://d2ljnjjjyb1wj" path="res://assets/objects/astronaut/rocket.png" id="10_0pg1p"]
+[ext_resource type="Texture2D" uid="uid://dew02a0txxsgm" path="res://assets/objects/astronaut/weirdDrawing.png" id="11_7cxsj"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="12_gg0ug"]
+[ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="13_0wq6r"]
+[ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="14_n50nd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bx8e"]
+size = Vector2(86, 137)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqaqj"]
+size = Vector2(78, 104)
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_raw3p")
@@ -39,4 +50,33 @@ grow_vertical = 0
 scale = Vector2(0.400001, 0.400001)
 texture_normal = ExtResource("3_wgy0u")
 
+[node name="Rocket" type="Sprite2D" parent="."]
+position = Vector2(821, 161)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("10_0pg1p")
+
+[node name="WeirdDrawing" type="Sprite2D" parent="."]
+position = Vector2(185, -16)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("11_7cxsj")
+
+[node name="RocketArea" parent="." instance=ExtResource("12_gg0ug")]
+position = Vector2(824, 123)
+info = ExtResource("13_0wq6r")
+
+[node name="CollisionShape2D" parent="RocketArea" index="0"]
+position = Vector2(1, 33)
+shape = SubResource("RectangleShape2D_0bx8e")
+
+[node name="WeirdDrawingArea2" parent="." instance=ExtResource("12_gg0ug")]
+position = Vector2(186, -24)
+info = ExtResource("14_n50nd")
+
+[node name="CollisionShape2D" parent="WeirdDrawingArea2" index="0"]
+position = Vector2(-6, 5)
+shape = SubResource("RectangleShape2D_yqaqj")
+
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
+
+[editable path="RocketArea"]
+[editable path="WeirdDrawingArea2"]
