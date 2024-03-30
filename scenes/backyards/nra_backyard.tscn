@@ -1,7 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cjhapqe2ttrgw"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_tffod"]
-[ext_resource type="Texture2D" uid="uid://b04cosog8p6fm" path="res://assets/backyards/IMG_2535.png" id="2_igkcl"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="2_td5p2"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_1jkqm"]
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="3_smlve"]
@@ -9,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="4_wuooo"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="5_4tr51"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_fk8ts"]
+[ext_resource type="Texture2D" uid="uid://dynj48hav4cgm" path="res://assets/backyards/nraBackyard.png" id="8_yk0we"]
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_tffod")
@@ -17,7 +17,7 @@ others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtRes
 state = ExtResource("3_uwtm5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_igkcl")
+texture = ExtResource("8_yk0we")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)

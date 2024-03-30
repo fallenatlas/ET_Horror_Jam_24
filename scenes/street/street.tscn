@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_xxe25"]
 [ext_resource type="PackedScene" uid="uid://bywfvf3mwlcdn" path="res://scenes/player/player.tscn" id="3_cv8og"]
-[ext_resource type="PackedScene" uid="uid://cft8xi8ojtc1a" path="res://scenes/backyards/backyard_box.tscn" id="4_m0bra"]
+[ext_resource type="PackedScene" uid="uid://byp5jikcl7ulf" path="res://scenes/backyards/backyard_box.tscn" id="4_m0bra"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_gd66b"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="6_ke5bg"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="7_4a2hb"]
