@@ -1,13 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://eshxlb8wgx1e"]
+[gd_scene load_steps=10 format=3 uid="uid://dagkfrk8x83wq"]
 
 [ext_resource type="Texture2D" uid="uid://cngvcruxkjxt3" path="res://assets/player_house/player_house.png" id="1_7gi6r"]
 [ext_resource type="Script" path="res://scripts/player/player_house_view.gd" id="1_11hon"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_43vpj"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="2_au67o"]
+[ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="3_ifhjv"]
+[ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="4_3fdce"]
+[ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="5_upgsr"]
+[ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_0hrat"]
+[ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="7_4rtax"]
 
 [node name="PlayerHouseView" type="Node2D"]
 script = ExtResource("1_11hon")
 game_state = ExtResource("2_43vpj")
+others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_ifhjv"), ExtResource("4_3fdce"), ExtResource("5_upgsr"), ExtResource("6_0hrat"), ExtResource("7_4rtax")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7gi6r")

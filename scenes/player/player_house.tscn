@@ -1,15 +1,20 @@
-[gd_scene load_steps=18 format=3 uid="uid://d3yrhdr34bure"]
+[gd_scene load_steps=23 format=3 uid="uid://d3yrhdr34bure"]
 
 [ext_resource type="Script" path="res://scripts/player/player_house.gd" id="1_tc0cl"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_8p30u"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="2_78cl7"]
 [ext_resource type="Texture2D" uid="uid://bwmactn6lx428" path="res://assets/player_house/IMG_2543.png" id="2_gw5nf"]
+[ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="3_3c5oi"]
 [ext_resource type="Texture2D" uid="uid://cqplpng6gr1de" path="res://assets/characters/ct/IMG_2501.png" id="3_c73bt"]
 [ext_resource type="Script" path="res://scenes/player/characters.gd" id="4_ebmus"]
+[ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="4_qtxr4"]
 [ext_resource type="Script" path="res://scripts/player/character_toggle.gd" id="5_4kjnd"]
+[ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="5_ieufn"]
+[ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_62eyn"]
 [ext_resource type="Script" path="res://scenes/player/objects.gd" id="6_65r3x"]
 [ext_resource type="Script" path="res://scripts/player/object_toggle.gd" id="6_r0wbb"]
 [ext_resource type="Resource" uid="uid://elp1bjj3yyw6" path="res://custom_resources/characters/ct.tres" id="7_elvin"]
+[ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="7_jxt6y"]
 [ext_resource type="Resource" uid="uid://dmhsgp2xgtk1l" path="res://custom_resources/characters/couple.tres" id="8_uxkof"]
 [ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="11_r3l00"]
 [ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/rock.tres" id="12_cb4w8"]
@@ -35,6 +40,7 @@ fill_from = Vector2(0.5, 0.5)
 [node name="EvidenceBoard" type="Node2D"]
 script = ExtResource("1_tc0cl")
 game_state = ExtResource("2_8p30u")
+other = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_3c5oi"), ExtResource("4_qtxr4"), ExtResource("5_ieufn"), ExtResource("6_62eyn"), ExtResource("7_jxt6y")])
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("2_gw5nf")

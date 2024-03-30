@@ -4,6 +4,7 @@ extends Node2D
 @onready var objects = $Objects
 
 @export var game_state : GameStateResource
+@export var other : Array[Backyard_Resource]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

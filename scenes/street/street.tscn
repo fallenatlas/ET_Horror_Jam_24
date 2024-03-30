@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_xxe25"]
 [ext_resource type="PackedScene" uid="uid://bywfvf3mwlcdn" path="res://scenes/player/player.tscn" id="3_cv8og"]
-[ext_resource type="PackedScene" uid="uid://byp5jikcl7ulf" path="res://scenes/backyards/backyard_box.tscn" id="4_m0bra"]
+[ext_resource type="PackedScene" uid="uid://cft8xi8ojtc1a" path="res://scenes/backyards/backyard_box.tscn" id="4_m0bra"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_gd66b"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="6_ke5bg"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="7_4a2hb"]
@@ -38,6 +38,7 @@ size = Vector2(908, 177)
 [node name="Street" type="Node2D"]
 script = ExtResource("1_0wohs")
 game_state = ExtResource("2_xxe25")
+backdoors = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("8_jwnxi"), ExtResource("6_ke5bg"), ExtResource("9_v4wku"), ExtResource("6_gd66b"), ExtResource("7_4a2hb")])
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -74,6 +75,7 @@ shape = SubResource("RectangleShape2D_1lh14")
 position = Vector2(-980, -215)
 info = ExtResource("6_ke5bg")
 exit_position = -940
+game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="CoupleBackyard" index="0"]
 position = Vector2(54, -7.5)
@@ -82,6 +84,7 @@ shape = SubResource("RectangleShape2D_amfkp")
 [node name="KarenBackyard" parent="." instance=ExtResource("4_m0bra")]
 info = ExtResource("6_gd66b")
 exit_position = 220
+game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="KarenBackyard" index="0"]
 position = Vector2(953.063, -15)
@@ -91,6 +94,7 @@ shape = SubResource("RectangleShape2D_2ynj1")
 position = Vector2(1526, -126)
 info = ExtResource("7_4a2hb")
 exit_position = 1520
+game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="NRABackyard" index="0"]
 position = Vector2(416, 6)
@@ -100,6 +104,7 @@ shape = SubResource("RectangleShape2D_11dl6")
 position = Vector2(2500, -402)
 info = ExtResource("8_jwnxi")
 exit_position = 2540
+game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="AstronautBackyard" index="0"]
 position = Vector2(34.1406, 266)
@@ -109,6 +114,7 @@ shape = SubResource("RectangleShape2D_u6piu")
 position = Vector2(-2808, -231)
 info = ExtResource("9_v4wku")
 exit_position = -2770
+game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="CTBackyard" index="0"]
 position = Vector2(8.00024, 1.5)

@@ -1,6 +1,7 @@
 extends Node
 
 @export var game_state : GameStateResource
+@export var others : Array[Backyard_Resource]
 var day_limit = 5
 var suspicion = 0
 

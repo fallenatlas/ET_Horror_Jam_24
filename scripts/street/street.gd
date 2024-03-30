@@ -2,6 +2,7 @@ extends Node2D
 
 var day_limit = 5
 @export var game_state : GameStateResource
+@export var backdoors : Array[Backyard_Resource]
 var suspicion
 
 # Astronaut, CT, NRA, Karen
@@ -19,9 +20,12 @@ func _ready():
 	print_debug(game_state.day_or_night + str(game_state.current_day))
 	Dialogic.signal_event.connect(_on_signal_event)
 	get_node("Player").disable_y_movement()
-	get_node("Player").position.x = game_state.position_on_street
-	get_node("Player").disable_player()
-	Dialogic.start(_get_prefix() + "outside")
+	if game_state.visit_number == 0:
+		get_node("Player").position.x = game_state.position_on_street
+		get_node("Player").disable_player()
+		Dialogic.start(_get_prefix() + "outside") # first time outside
+	elif _need_to_go_home():
+		Dialogic.start("needToGoHome")
 
 func _on_signal_event(argument : String):
 	match argument:
@@ -29,6 +33,8 @@ func _on_signal_event(argument : String):
 			_investigate()
 		"enterHouse":
 			_enter_house()
+		"endOutside":
+			get_node("Player").enable_player()
 
 func _get_prefix():
 	return game_state.day_or_night + str(game_state.current_day)
@@ -45,9 +51,24 @@ func _on_dumpster_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
 		Dialogic.start("dumpster")
 		
+func _can_enter_house():
+	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number == 5
+		
+func _need_to_go_home():
+	return (game_state.current_day > 1 && game_state.visit_number > 1) || game_state.visit_number == 5
+
+func _reset_visits():
+	for resource in backdoors:
+		resource.first_time_day = true
+	game_state.visit_number = 0
+
 func _on_player_house_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
-		Dialogic.start("enterHouse")
+		if ! _can_enter_house():
+			Dialogic.start("continueOutside")
+		else:
+			_reset_visits()
+			Dialogic.start("enterHouse")
 
 func _enter_house():
 	save_player_position(-1890)

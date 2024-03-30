@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_bt4w4")
 first_time = true
+first_time_day = true
 owner = "couple"
