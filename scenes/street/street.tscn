@@ -128,7 +128,7 @@ shape = SubResource("RectangleShape2D_453il")
 position = Vector2(793.593, 850.319)
 script = ExtResource("11_27tvp")
 info = ExtResource("7_4a2hb")
-exit_position = -395
+exit_position = 1520
 game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="NRADoor" index="0"]

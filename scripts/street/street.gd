@@ -20,8 +20,8 @@ func _ready():
 	print_debug(game_state.day_or_night + str(game_state.current_day))
 	Dialogic.signal_event.connect(_on_signal_event)
 	get_node("Player").disable_y_movement()
+	get_node("Player").position.x = game_state.position_on_street
 	if game_state.visit_number == 0:
-		get_node("Player").position.x = game_state.position_on_street
 		get_node("Player").disable_player()
 		Dialogic.start(_get_prefix() + "outside") # first time outside
 	elif _need_to_go_home():
