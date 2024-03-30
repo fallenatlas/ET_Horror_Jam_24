@@ -1,3 +1,4 @@
 [Noise stops]
 join player 2
 player: The noise stopped. Maybe I should see if I can find out what was making it.
+[signal arg="endOutside"]

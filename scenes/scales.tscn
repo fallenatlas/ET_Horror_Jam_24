@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://btj1vlbcqjjf5"]
+
+[ext_resource type="Texture2D" uid="uid://cq6tls4lemuvg" path="res://assets/objects/other/scales.png" id="1_vktbh"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="2_skblr"]
+[ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="3_yw8qg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2x1y"]
+size = Vector2(1925, 1450)
+
+[node name="Scales" type="Sprite2D"]
+position = Vector2(2156, 173)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_vktbh")
+
+[node name="ScalesArea" parent="." instance=ExtResource("2_skblr")]
+position = Vector2(-62.5, -25)
+info = ExtResource("3_yw8qg")
+
+[node name="CollisionShape2D" parent="ScalesArea" index="0"]
+position = Vector2(112.5, 50)
+shape = SubResource("RectangleShape2D_w2x1y")
+
+[editable path="ScalesArea"]

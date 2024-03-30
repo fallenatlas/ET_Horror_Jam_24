@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dif5pc5nhk4pc"]
+[gd_scene load_steps=22 format=3 uid="uid://dif5pc5nhk4pc"]
 
 [ext_resource type="Script" path="res://scripts/street/street.gd" id="1_0wohs"]
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="8_jwnxi"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="9_v4wku"]
 [ext_resource type="Script" path="res://scripts/backyards/nra_backyard.gd" id="11_27tvp"]
+[ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="14_o8xl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjw7d"]
 size = Vector2(73, 1077)
@@ -43,6 +44,7 @@ size = Vector2(908, 177)
 script = ExtResource("1_0wohs")
 game_state = ExtResource("2_xxe25")
 backdoors = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("8_jwnxi"), ExtResource("6_ke5bg"), ExtResource("9_v4wku"), ExtResource("6_gd66b"), ExtResource("7_4a2hb")])
+scales = ExtResource("14_o8xl0")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

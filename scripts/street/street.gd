@@ -3,6 +3,7 @@ extends Node2D
 var day_limit = 5
 @export var game_state : GameStateResource
 @export var backdoors : Array[Backyard_Resource]
+@export var scales : InteractableObject
 var suspicion
 
 # Astronaut, CT, NRA, Karen
@@ -21,6 +22,8 @@ func _ready():
 	Dialogic.signal_event.connect(_on_signal_event)
 	get_node("Player").disable_y_movement()
 	get_node("Player").position.x = game_state.position_on_street
+	if _need_scales_found():
+		_instantiate_scales()	
 	if game_state.visit_number == 0:
 		get_node("Player").disable_player()
 		Dialogic.start(_get_prefix() + "outside") # first time outside
@@ -52,7 +55,7 @@ func _on_dumpster_input_event(viewport, event, shape_idx):
 		Dialogic.start("dumpster")
 		
 func _can_enter_house():
-	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number == 5
+	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number == 0
 		
 func _need_to_go_home():
 	return (game_state.current_day > 1 && game_state.visit_number > 1) || game_state.visit_number == 5
@@ -66,6 +69,8 @@ func _on_player_house_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
 		if ! _can_enter_house():
 			Dialogic.start("continueOutside")
+		elif _need_scales_found():
+			Dialogic.start("continueInvestigation")
 		else:
 			_reset_visits()
 			Dialogic.start("enterHouse")
@@ -73,6 +78,17 @@ func _on_player_house_input_event(viewport, event, shape_idx):
 func _enter_house():
 	save_player_position(-1890)
 	get_tree().change_scene_to_file("res://scenes/player/player_house.tscn")
+
+func _need_scales_found():
+	return game_state.current_day == 1 && game_state.day_or_night == "night" && ! scales.found
+
+func _scales_found():
+	return scales.found
+
+func _instantiate_scales():
+	var scales = load("res://scenes/scales.tscn")
+	var instance = scales.instantiate()
+	add_child(instance)
 
 func save_player_position(x):
 	game_state.position_on_street = x
