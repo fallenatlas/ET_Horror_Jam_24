@@ -4,6 +4,7 @@ const SPEED = 400.0
 const JUMP_VELOCITY = -400.0
 
 var move_on_y : bool = true
+var disable_movement : bool = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation : AnimatedSprite2D = get_node("AnimatedSprite2D")
@@ -14,6 +15,8 @@ func _on_ready():
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
+	if disable_movement: return
+	
 	var is_moving_x = handle_x_movement()
 	var is_moving_y = false
 	if move_on_y:
@@ -50,3 +53,11 @@ func handle_y_movement() -> bool:
 	
 func disable_y_movement():
 	move_on_y = false
+	
+func disable_player():
+	disable_movement = true
+	animation.visible = false
+	
+func enable_player():
+	disable_movement = false
+	animation.visible = true

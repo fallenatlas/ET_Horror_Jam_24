@@ -7,4 +7,4 @@
 script = ExtResource("1_hn33h")
 found = true
 art = ExtResource("1_8nno8")
-name = ""
+dialog_name = ""

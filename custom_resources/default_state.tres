@@ -7,3 +7,4 @@ script = ExtResource("1_2jle6")
 current_day = 1
 day_or_night = "day"
 suspicion = 0
+position_on_street = -1890

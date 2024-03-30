@@ -19,6 +19,8 @@ func _ready():
 	print_debug(game_state.day_or_night + str(game_state.current_day))
 	Dialogic.signal_event.connect(_on_signal_event)
 	get_node("Player").disable_y_movement()
+	get_node("Player").position.x = game_state.position_on_street
+	get_node("Player").disable_player()
 	Dialogic.start(_get_prefix() + "outside")
 
 func _on_signal_event(argument : String):
@@ -48,4 +50,8 @@ func _on_player_house_input_event(viewport, event, shape_idx):
 		Dialogic.start("enterHouse")
 
 func _enter_house():
+	save_player_position(-1890)
 	get_tree().change_scene_to_file("res://scenes/player/player_house.tscn")
+
+func save_player_position(x):
+	game_state.position_on_street = x
