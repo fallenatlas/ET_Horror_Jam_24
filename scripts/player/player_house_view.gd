@@ -7,6 +7,8 @@ var suspicion = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if game_state.current_day == 5 && game_state.day_or_night == "night": #player death
+		_end_game()
 	print_debug(_get_prefix())
 	Dialogic.signal_event.connect(_on_signal_event)
 	_change_day_and_night()
@@ -35,6 +37,9 @@ func _on_exit_button_pressed():
 		Dialogic.start("exitHouse")
 	else:
 		_exit_house()
+
+func _end_game():
+	Dialogic.start("playerDeath")
 
 func _exit_house():
 	get_tree().change_scene_to_file("res://scenes/street/street.tscn")

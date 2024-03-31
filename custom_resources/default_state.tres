@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_2jle6")
-current_day = 2
+current_day = 5
 day_or_night = "day"
 suspicion = 0
 position_on_street = -1890

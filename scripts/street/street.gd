@@ -5,6 +5,7 @@ var day_limit = 5
 @export var backdoors : Array[Backyard_Resource]
 @export var scales : InteractableObject
 var suspicion
+var alienFaced = false
 
 # Astronaut, CT, NRA, Karen
 var death_array = ["Mr Johnson", "Joanne", "Billy", "Charlotte"]
@@ -45,6 +46,8 @@ func _on_signal_event(argument : String):
 			_enter_house()
 		"endOutside":
 			get_node("Player").enable_player()
+		"alienFaced":
+			alienFaced = true
 
 func _get_prefix():
 	return game_state.day_or_night + str(game_state.current_day)
@@ -81,6 +84,8 @@ func _on_player_house_input_event(viewport, event, shape_idx):
 			Dialogic.start("continueOutside")
 		elif _need_scales_found():
 			Dialogic.start("continueInvestigation")
+		elif _need_to_face_alien():
+			Dialogic.start("needToFaceAlien")
 		else:
 			_reset_visits()
 			Dialogic.start("enterHouse")
@@ -94,6 +99,9 @@ func _enter_house():
 
 func _need_scales_found():
 	return game_state.current_day == 1 && game_state.day_or_night == "night" && ! scales.found
+
+func _need_to_face_alien():
+	return game_state.current_day == 5 && game_state.day_or_night == "night" && ! alienFaced
 
 func _scales_found():
 	return scales.found

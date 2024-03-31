@@ -72,6 +72,7 @@ directories/dtl_directory={
 "karenPoison": "res://Timelines/interactions/karenPoison.dtl",
 "karenPresentations": "res://Timelines/presentations/karenPresentations.dtl",
 "keepAway": "res://Timelines/keepAway.dtl",
+"needToFaceAlien": "res://Timelines/needToFaceAlien.dtl",
 "needToGoHome": "res://Timelines/needToGoHome.dtl",
 "night1": "res://Timelines/night1/night1.dtl",
 "night1Scales": "res://Timelines/night1/night1Scales.dtl",
