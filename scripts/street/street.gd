@@ -44,6 +44,8 @@ func _on_signal_event(argument : String):
 			_investigate()
 		"enterHouse":
 			_enter_house()
+		"startOutside":
+			get_node("Player").disable_player()
 		"endOutside":
 			get_node("Player").enable_player()
 		"alienFaced":

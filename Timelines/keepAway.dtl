@@ -1,2 +1,4 @@
+[signal arg="startOutside"]
 join player 2
 player: I should find another way to get into Billy's house if I don't want to get shot.
+[signal arg="endOutside"]

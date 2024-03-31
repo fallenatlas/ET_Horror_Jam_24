@@ -1,3 +1,4 @@
+[signal arg="startOutside"]
 join player 2
 player: OH MY GOD. {killed}!
 player: {pronoun} is really dead. I bet it was the alien. I should call the police and let them know.
@@ -10,3 +11,4 @@ player: What? I was just taking a walk and found blood in Mr Johnson’s front y
 leave player
 join Karen 2
 Karen: I’ll have my eyes on you kid!
+[signal arg="endOutside"]

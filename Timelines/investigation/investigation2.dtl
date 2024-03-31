@@ -1,3 +1,4 @@
+[signal arg="startOutside"]
 join player 2
 player: Oh no! The alien killed {killed}! I need to call the police!
 leave player
@@ -13,3 +14,4 @@ Karen: YOU CAN’T TRUST ANYONE!
 leave Karen
 join player 2
 player: Someone has to do something and just complaining won’t solve anything. Good night Charlotte.
+[signal arg="endOutside"]

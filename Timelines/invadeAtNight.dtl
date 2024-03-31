@@ -1,2 +1,4 @@
+[signal arg="startOutside"]
 join player 2
 player: I don't think it's a good idea to enter someone's house at night.
+[signal arg="endOutside"]

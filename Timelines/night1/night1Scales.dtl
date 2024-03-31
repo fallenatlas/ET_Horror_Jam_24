@@ -1,2 +1,4 @@
+[signal arg="startOutside"]
 join player 2
 player: What is this? It 's disgusting! I will keep it and ask around tomorrow to see if anyone recognizes it.
+[signal arg="endOutside"]

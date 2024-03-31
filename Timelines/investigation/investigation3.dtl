@@ -1,3 +1,4 @@
+[signal arg="startOutside"]
 join player 2
 player: This is getting out of control. I need to figure it out quickly, or I may be next.
 leave player

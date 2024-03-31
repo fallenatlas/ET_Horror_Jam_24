@@ -1,3 +1,4 @@
+[signal arg="startOutside"]
 join Darla 2
 ...
 leave Darla
@@ -10,3 +11,4 @@ leave Darla
 join player 2
 player: I need to go home and call the police!
 [signal arg="alienFaced"]
+[signal arg="endOutside"]

@@ -1,2 +1,4 @@
+[signal arg="startOutside"]
 join player 2
 player: I should investigate to see if I can find any clue about that noise.
+[signal arg="endOutside"]

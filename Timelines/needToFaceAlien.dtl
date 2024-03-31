@@ -1,2 +1,4 @@
-join player 1
+[signal arg="startOutside"]
+join player 2
 player: I need to face the alien before it kills again!
+[signal arg="endOutside"]
