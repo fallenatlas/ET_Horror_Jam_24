@@ -12,7 +12,11 @@ func _on_input_event(viewport, event, shape_idx):
 		if _need_to_go_home():
 			Dialogic.start("needToGoHome")
 		elif game_state.day_or_night == "night":
-			Dialogic.start("invadeAtNight")
+			print_debug(info.owner + " vs " + game_state.killed)
+			if info.owner != game_state.killed:
+				Dialogic.start("invadeAtNight")
+			else:
+				Dialogic.start("investigate")
 		else:
 			if game_state.current_day == 1:
 				get_parent().save_player_position(exit_position)
