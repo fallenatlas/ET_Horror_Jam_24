@@ -74,7 +74,6 @@ directories/dtl_directory={
 "keepAway": "res://Timelines/keepAway.dtl",
 "needToGoHome": "res://Timelines/needToGoHome.dtl",
 "night1": "res://Timelines/night1/night1.dtl",
-"night1Outside": "res://Timelines/night1/night1Outside.dtl",
 "night1Scales": "res://Timelines/night1/night1Scales.dtl",
 "night1outside": "res://Timelines/night1/night1outside.dtl",
 "night2": "res://Timelines/night2/night2.dtl",

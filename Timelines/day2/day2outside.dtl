@@ -4,7 +4,6 @@ leave player
 join Karen 2
 Karen: Don't even say anything! I couldn't sleep at all.
 leave Karen
-join player 2
 player: I Looked and found this outside.
 leave player
 join Astronaut 2
@@ -50,3 +49,4 @@ leave player
 We can only get involved if you have solid evidence of alien presence, and who the alien is. Until then, good luck kid.
 join player 2
 player: I knew the police wouldn’t believe me. Maybe I really need to find the alien on my own.
+[signal arg="endOutside"]

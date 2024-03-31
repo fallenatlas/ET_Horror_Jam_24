@@ -5,3 +5,4 @@ class_name InteractableObject
 @export var found : bool
 @export var art : Texture2D
 @export var dialog_name : String
+@export var state : GameStateResource

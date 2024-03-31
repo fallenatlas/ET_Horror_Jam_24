@@ -1,6 +1,6 @@
 join CT 2
-CT: Yes, a few years ago strange scales were found near a car crash site nearby.\
-They look similar to what you found…
+CT: Yes, a few years ago strange scales were found near a car crash site.\
+The victims were the previous owners of your house.
 leave CT
 join player 2
-player: Player - They do indeed.
+player: I had no idea. May they rest in peace.

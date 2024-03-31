@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdyvp27u06fne"]
+[gd_scene load_steps=14 format=3 uid="uid://bdyvp27u06fne"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_0gc08"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="2_1awxl"]
@@ -9,6 +9,12 @@
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="4_e4mim"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="5_4jeac"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="6_5j5wy"]
+[ext_resource type="Texture2D" uid="uid://bpu6545p1atae" path="res://assets/objects/ct/newspaper.png" id="10_2te40"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="11_a6ae7"]
+[ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="12_vidx4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uramn"]
+size = Vector2(87, 50)
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_0gc08")
@@ -43,4 +49,18 @@ grow_vertical = 0
 scale = Vector2(0.400001, 0.400001)
 texture_normal = ExtResource("3_yjre1")
 
+[node name="Newspaper" type="Sprite2D" parent="."]
+position = Vector2(800, 156)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("10_2te40")
+
+[node name="NewspaperArea" parent="." instance=ExtResource("11_a6ae7")]
+info = ExtResource("12_vidx4")
+
+[node name="CollisionShape2D" parent="NewspaperArea" index="0"]
+position = Vector2(797.5, 155)
+shape = SubResource("RectangleShape2D_uramn")
+
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
+
+[editable path="NewspaperArea"]

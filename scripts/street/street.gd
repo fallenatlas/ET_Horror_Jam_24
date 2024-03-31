@@ -7,11 +7,11 @@ var day_limit = 5
 var suspicion
 
 # Astronaut, CT, NRA, Karen
-var death_array = ["Mr Johnson", "CT", "NRA", "Charlotte"]
+var death_array = ["Mr Johnson", "Joanne", "Billy", "Charlotte"]
 var pronoun_map = {
 	"Mr Johnson" : "He", 
-	"CT" : "She",
-	"NRA" : "He",
+	"Joanne" : "She",
+	"Billy" : "He",
 	"Charlotte" : "She"
 }
 
@@ -49,7 +49,7 @@ func _get_prefix():
 func _investigate():
 	suspicion += 1
 	game_state.suspicion = suspicion
-	var killed = death_array[ - 2] # day 2 corresponds to 1st element
+	var killed = death_array[game_state.current_day - 2] # day 2 corresponds to 1st element
 	Dialogic.VAR.killed = killed
 	Dialogic.VAR.pronoun = pronoun_map[killed]
 	Dialogic.start("investigation" + str(suspicion))
@@ -81,7 +81,10 @@ func _on_player_house_input_event(viewport, event, shape_idx):
 
 func _enter_house():
 	save_player_position(-1890)
-	get_tree().change_scene_to_file("res://scenes/player/player_house.tscn")
+	if game_state.day_or_night == "night" || game_state.current_day == 1:
+		get_tree().change_scene_to_file("res://scenes/player/player_house_view.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/player/player_house.tscn")
 
 func _need_scales_found():
 	return game_state.current_day == 1 && game_state.day_or_night == "night" && ! scales.found

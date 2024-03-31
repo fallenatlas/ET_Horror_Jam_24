@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ggomwdn25vkd" path="res://assets/backyards/astronautBackyard.png" id="8_4sa18"]
 [ext_resource type="Texture2D" uid="uid://d2ljnjjjyb1wj" path="res://assets/objects/astronaut/rocket.png" id="10_0pg1p"]
 [ext_resource type="Texture2D" uid="uid://dew02a0txxsgm" path="res://assets/objects/astronaut/weirdDrawing.png" id="11_7cxsj"]
-[ext_resource type="PackedScene" path="res://scenes/interactable_box.tscn" id="12_gg0ug"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="12_gg0ug"]
 [ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="13_0wq6r"]
 [ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="14_n50nd"]
 

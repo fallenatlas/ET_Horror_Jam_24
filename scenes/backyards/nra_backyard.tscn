@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dynj48hav4cgm" path="res://assets/backyards/nraBackyard.png" id="8_yk0we"]
 [ext_resource type="Texture2D" uid="uid://bg1e2gv1owqm1" path="res://assets/backyards/IMG_2542.png" id="9_8g45y"]
 [ext_resource type="Texture2D" uid="uid://couq3fodbrqlw" path="res://assets/objects/nra/taser.png" id="10_6ctk2"]
-[ext_resource type="PackedScene" path="res://scenes/interactable_box.tscn" id="11_bfa33"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="11_bfa33"]
 [ext_resource type="Resource" uid="uid://ddk8l4dcaobtt" path="res://custom_resources/objects/nra/nraTaser.tres" id="12_i7y6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3tqbo"]
