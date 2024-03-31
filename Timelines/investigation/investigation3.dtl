@@ -12,3 +12,4 @@ Karen: You are going down, freak!!
 leave player
 join Karen 2
 You were arrested and taken to a government lab.
+[signal arg="endGame"]

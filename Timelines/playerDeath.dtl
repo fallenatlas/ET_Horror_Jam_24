@@ -10,3 +10,4 @@ join player 2
 player: NOOOOOOO!
 leave player
 [You died]
+[signal arg="endGame"]

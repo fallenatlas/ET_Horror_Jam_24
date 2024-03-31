@@ -48,6 +48,8 @@ func _on_signal_event(argument : String):
 			get_node("Player").enable_player()
 		"alienFaced":
 			alienFaced = true
+		"endGame":
+			_end_game()
 
 func _get_prefix():
 	return game_state.day_or_night + str(game_state.current_day)
@@ -110,6 +112,9 @@ func _instantiate_scales():
 	var scales = load("res://scenes/scales.tscn")
 	var instance = scales.instantiate()
 	add_child(instance)
+
+func _end_game(): # called when death or jail
+	get_tree().change_scene_to_file("res://scenes/menus/main_menu.tscn")
 
 func save_player_position(x):
 	game_state.position_on_street = x
