@@ -14,6 +14,7 @@ var pronoun_map = {
 	"Billy" : "He",
 	"Charlotte" : "She"
 }
+var house_death_order = ["astronaut", "ct", "nra", "couple"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,6 +27,8 @@ func _ready():
 		get_node("Lights").visible = true
 	get_node("Player").disable_y_movement()
 	get_node("Player").position.x = game_state.position_on_street
+	if game_state.current_day > 1 && game_state.day_or_night == "night":
+		game_state.killed = house_death_order[game_state.current_day - 2]
 	if _need_scales_found():
 		_instantiate_scales()	
 	if game_state.visit_number == 0:
@@ -47,6 +50,9 @@ func _get_prefix():
 	return game_state.day_or_night + str(game_state.current_day)
 
 func _investigate():
+	if game_state.current_day == 5:      # alien killing player scenario
+		Dialogic.start("investigation4")
+		return
 	suspicion += 1
 	game_state.suspicion = suspicion
 	var killed = death_array[game_state.current_day - 2] # day 2 corresponds to 1st element
@@ -59,7 +65,7 @@ func _on_dumpster_input_event(viewport, event, shape_idx):
 		Dialogic.start("dumpster")
 		
 func _can_enter_house():
-	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number == 0
+	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number >= 5
 		
 func _need_to_go_home():
 	return (game_state.current_day > 1 && game_state.visit_number > 1) || game_state.visit_number == 5

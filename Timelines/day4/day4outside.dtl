@@ -9,3 +9,4 @@ Matt: Let’s not be so aggressive. The police aren’t going to do anything so 
 leave Matt
 join player 2
 player: Ok, I will.
+[signal arg="endOutside"]

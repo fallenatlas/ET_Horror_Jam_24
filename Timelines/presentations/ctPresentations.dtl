@@ -2,14 +2,14 @@ join player 2
 player: Hi, my name is Alex! I am your new neighbor!
 leave player
 join CT 2
-leave player
+CT: Hi I am Joanne!
 CT: If you need help setting up surveillance, I am the right gal.
 leave CT
 join player 2
 player: Surveillance?
 leave player
 join CT 2
-CT: Yes, cameras, sensors, etc. You never can be to careful!
+CT: Yes, cameras, sensors, etc. You can never be to careful!
 leave CT
 join player 2
 player: Hummm, thanks for the offer, but I think I am good. Would you want a cookie?

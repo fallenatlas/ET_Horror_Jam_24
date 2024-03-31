@@ -4,3 +4,4 @@ Darla: The police are investigating the matter, but they didn’t find anything 
 leave Darla
 join player 2
 player: I will keep investigating this matter. I will catch the culprits for sure.
+[signal arg="endOutside"]

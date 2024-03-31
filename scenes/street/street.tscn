@@ -23,25 +23,25 @@ size = Vector2(73, 1077)
 size = Vector2(339, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amfkp"]
-size = Vector2(792, 225)
+size = Vector2(792, 656)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ynj1"]
-size = Vector2(589.875, 218)
+size = Vector2(1087.87, 463)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11dl6"]
 size = Vector2(96, 198)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6piu"]
-size = Vector2(519.719, 198)
+size = Vector2(659, 723)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_453il"]
-size = Vector2(668, 189)
+size = Vector2(707, 454)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_by1ai"]
-size = Vector2(997, 244)
+size = Vector2(997, 738)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7q7ep"]
-size = Vector2(908, 177)
+size = Vector2(916, 459.557)
 
 [node name="Street" type="Node2D"]
 script = ExtResource("1_0wohs")
@@ -98,7 +98,7 @@ exit_position = -940
 game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="CoupleBackyard" index="0"]
-position = Vector2(54, -7.5)
+position = Vector2(54, -223)
 shape = SubResource("RectangleShape2D_amfkp")
 
 [node name="KarenBackyard" parent="." instance=ExtResource("4_m0bra")]
@@ -107,7 +107,7 @@ exit_position = 220
 game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="KarenBackyard" index="0"]
-position = Vector2(953.063, -15)
+position = Vector2(1202.06, -137.5)
 shape = SubResource("RectangleShape2D_2ynj1")
 
 [node name="NRABackyard" parent="." instance=ExtResource("4_m0bra")]
@@ -127,7 +127,7 @@ exit_position = 2540
 game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="AstronautBackyard" index="0"]
-position = Vector2(34.1406, 266)
+position = Vector2(-3.5, 3.5)
 shape = SubResource("RectangleShape2D_u6piu")
 
 [node name="CTBackyard" parent="." instance=ExtResource("4_m0bra")]
@@ -137,7 +137,7 @@ exit_position = -2770
 game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="CTBackyard" index="0"]
-position = Vector2(8.00024, 1.5)
+position = Vector2(9.5, -131)
 shape = SubResource("RectangleShape2D_453il")
 
 [node name="NRADoor" parent="." instance=ExtResource("4_m0bra")]
@@ -148,7 +148,7 @@ exit_position = 1520
 game_state = ExtResource("2_xxe25")
 
 [node name="Backyard" parent="NRADoor" index="0"]
-position = Vector2(528.907, -991.319)
+position = Vector2(555.407, -1226.32)
 shape = SubResource("RectangleShape2D_by1ai")
 
 [node name="PlayerHouse" parent="." instance=ExtResource("4_m0bra")]
@@ -156,7 +156,7 @@ position = Vector2(-1910, -215)
 script = null
 
 [node name="Backyard" parent="PlayerHouse" index="0"]
-position = Vector2(10, -4.5)
+position = Vector2(14, -146.328)
 scale = Vector2(1, 1.00389)
 shape = SubResource("RectangleShape2D_7q7ep")
 

@@ -3,3 +3,4 @@ Matt: This is getting out of hand. Everyone’s dying and we are down to 3 house
 leave Matt
 join player 2
 player: Ok, I will.
+[signal arg="endOutside"]
