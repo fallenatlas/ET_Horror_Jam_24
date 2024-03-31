@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterState" load_steps=3 format=3 uid="uid://dvjuuq6sg6se"]
+
+[ext_resource type="Texture2D" uid="uid://dr61s8p34ij4g" path="res://assets/photos/nraPhoto.png" id="1_ksq6o"]
+[ext_resource type="Script" path="res://scripts/character_state.gd" id="2_s6ki2"]
+
+[resource]
+script = ExtResource("2_s6ki2")
+alive = true
+art = ExtResource("1_ksq6o")

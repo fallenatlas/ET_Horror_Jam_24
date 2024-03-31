@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterState" load_steps=3 format=3 uid="uid://dgvnco285l0a2"]
+
+[ext_resource type="Texture2D" uid="uid://e85elj2n8qv5" path="res://assets/photos/karenPhoto.png" id="1_03lmf"]
+[ext_resource type="Script" path="res://scripts/character_state.gd" id="2_pvb7r"]
+
+[resource]
+script = ExtResource("2_pvb7r")
+alive = true
+art = ExtResource("1_03lmf")

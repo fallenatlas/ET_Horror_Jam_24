@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CharacterState" load_steps=3 format=3 uid="uid://dmhsgp2xgtk1l"]
 
 [ext_resource type="Script" path="res://scripts/character_state.gd" id="1_3dhim"]
-[ext_resource type="Texture2D" uid="uid://dlwf063jjcjuv" path="res://assets/characters/couple/IMG_2504.png" id="1_bxqrv"]
+[ext_resource type="Texture2D" uid="uid://bdjbkcvjqhudk" path="res://assets/photos/couplePhoto.png" id="1_u1dfa"]
 
 [resource]
 script = ExtResource("1_3dhim")
 alive = true
-art = ExtResource("1_bxqrv")
+art = ExtResource("1_u1dfa")

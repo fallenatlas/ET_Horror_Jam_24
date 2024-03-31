@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d3yrhdr34bure"]
+[gd_scene load_steps=33 format=3 uid="uid://d3yrhdr34bure"]
 
 [ext_resource type="Script" path="res://scripts/player/player_house.gd" id="1_tc0cl"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_8p30u"]
@@ -18,6 +18,16 @@
 [ext_resource type="Resource" uid="uid://dmhsgp2xgtk1l" path="res://custom_resources/characters/couple.tres" id="8_uxkof"]
 [ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="11_r3l00"]
 [ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/rock.tres" id="12_cb4w8"]
+[ext_resource type="Resource" uid="uid://dgvnco285l0a2" path="res://custom_resources/characters/karen.tres" id="15_641nw"]
+[ext_resource type="Resource" uid="uid://dvjuuq6sg6se" path="res://custom_resources/characters/nra.tres" id="16_6bafb"]
+[ext_resource type="Resource" uid="uid://duxdyyxoxkw30" path="res://custom_resources/characters/astronaut.tres" id="17_1w3kr"]
+[ext_resource type="Resource" uid="uid://ckcsgtv2dcnq2" path="res://custom_resources/objects/astronaut/astronautSpaceRock.tres" id="18_e64pf"]
+[ext_resource type="Resource" uid="uid://i6u3cnt1lprh" path="res://custom_resources/objects/karen/karenFur.tres" id="20_vvxij"]
+[ext_resource type="Resource" uid="uid://cb0w6byler0n4" path="res://custom_resources/objects/karen/karenPoison.tres" id="21_s2nar"]
+[ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="22_51ggc"]
+[ext_resource type="Resource" uid="uid://cylcj3rcton0u" path="res://custom_resources/objects/ct/CTOvniPhoto.tres" id="23_61uum"]
+[ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="24_drua0"]
+[ext_resource type="Resource" uid="uid://pufgkpkxnaqt" path="res://custom_resources/objects/karen/karenPainting.tres" id="25_a02g0"]
 
 [sub_resource type="Gradient" id="Gradient_mnkn1"]
 offsets = PackedFloat32Array(0.62987, 0.655844)
@@ -160,7 +170,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("5_4kjnd")
-character = ExtResource("8_uxkof")
+character = ExtResource("15_641nw")
 
 [node name="SelectIndicator" type="TextureRect" parent="Characters/KarenToggle"]
 z_as_relative = false
@@ -191,7 +201,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("5_4kjnd")
-character = ExtResource("8_uxkof")
+character = ExtResource("16_6bafb")
 
 [node name="SelectIndicator" type="TextureRect" parent="Characters/NRAToggle"]
 z_as_relative = false
@@ -222,7 +232,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("5_4kjnd")
-character = ExtResource("8_uxkof")
+character = ExtResource("17_1w3kr")
 
 [node name="SelectIndicator" type="TextureRect" parent="Characters/AstronautToggle"]
 z_as_relative = false
@@ -301,7 +311,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("18_e64pf")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/SpaceRockToggle"]
 z_as_relative = false
@@ -394,7 +404,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("20_vvxij")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/FurToggle"]
 z_as_relative = false
@@ -425,7 +435,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("21_s2nar")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/RatPoisonToggle"]
 z_as_relative = false
@@ -456,7 +466,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("22_51ggc")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/NewspaperToggle"]
 z_as_relative = false
@@ -487,7 +497,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("23_61uum")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/OvniPhotoToggle"]
 z_as_relative = false
@@ -518,7 +528,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("24_drua0")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/GooToggle"]
 z_as_relative = false
@@ -549,7 +559,7 @@ scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("25_a02g0")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/PaintingToggle"]
 z_as_relative = false

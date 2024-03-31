@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterState" load_steps=3 format=3 uid="uid://duxdyyxoxkw30"]
+
+[ext_resource type="Texture2D" uid="uid://dqawhqvrilkqb" path="res://assets/photos/astronautPhoto.png" id="1_y4lgg"]
+[ext_resource type="Script" path="res://scripts/character_state.gd" id="2_4h7pa"]
+
+[resource]
+script = ExtResource("2_4h7pa")
+alive = true
+art = ExtResource("1_y4lgg")

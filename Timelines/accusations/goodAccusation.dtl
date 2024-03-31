@@ -1,0 +1,9 @@
+join player 2
+player: I got you Matt and Darla. You will pay for your crimes.
+leave player
+join Darla 2
+Darla: Petty human. You think this is over?
+Matt: We will escape, and when we do, we will find you...
+leave Darla
+join player 2
+player: The government will lock you up in a place so deep you will never escape. Bye bye!
