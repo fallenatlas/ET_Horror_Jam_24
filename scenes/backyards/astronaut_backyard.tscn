@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ggomwdn25vkd" path="res://assets/backyards/astronautBackyard.png" id="8_4sa18"]
 [ext_resource type="Texture2D" uid="uid://d2ljnjjjyb1wj" path="res://assets/objects/astronaut/rocket.png" id="10_0pg1p"]
 [ext_resource type="Texture2D" uid="uid://dew02a0txxsgm" path="res://assets/objects/astronaut/weirdDrawing.png" id="11_7cxsj"]
-[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="12_gg0ug"]
+[ext_resource type="PackedScene" path="res://scenes/interactable_box.tscn" id="12_gg0ug"]
 [ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="13_0wq6r"]
 [ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="14_n50nd"]
 
@@ -27,7 +27,11 @@ info = ExtResource("2_x6msp")
 others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_pjia1"), ExtResource("4_8bfe6"), ExtResource("5_oekyo"), ExtResource("6_d32ih")])
 state = ExtResource("3_lipql")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="DayBackground" type="Sprite2D" parent="."]
+texture = ExtResource("8_4sa18")
+
+[node name="NightBackground" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("8_4sa18")
 
 [node name="Camera2D" type="Camera2D" parent="."]

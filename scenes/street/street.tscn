@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dif5pc5nhk4pc"]
+[gd_scene load_steps=24 format=3 uid="uid://dif5pc5nhk4pc"]
 
 [ext_resource type="Script" path="res://scripts/street/street.gd" id="1_0wohs"]
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
@@ -9,8 +9,11 @@
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="6_ke5bg"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="7_4a2hb"]
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="8_jwnxi"]
+[ext_resource type="Texture2D" uid="uid://bguxtv5g2cjjm" path="res://assets/street/IMG_2519.png" id="9_ej1rg"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="9_v4wku"]
+[ext_resource type="Texture2D" uid="uid://ce4favknb5bfx" path="res://assets/street/IMG_2515.png" id="10_tmajc"]
 [ext_resource type="Script" path="res://scripts/backyards/nra_backyard.gd" id="11_27tvp"]
+[ext_resource type="PackedScene" uid="uid://ce4efle10qkg5" path="res://scenes/menus/pause_menu.tscn" id="14_i2d2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjw7d"]
 size = Vector2(73, 1077)
@@ -44,6 +47,12 @@ script = ExtResource("1_0wohs")
 game_state = ExtResource("2_xxe25")
 backdoors = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("8_jwnxi"), ExtResource("6_ke5bg"), ExtResource("9_v4wku"), ExtResource("6_gd66b"), ExtResource("7_4a2hb")])
 
+[node name="Lights" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(0, -216)
+texture = ExtResource("10_tmajc")
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -51,6 +60,11 @@ backdoors = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([Ext
 [node name="Icon" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(0, -216)
 texture = ExtResource("2_267m8")
+
+[node name="Night" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+position = Vector2(0, -216)
+texture = ExtResource("9_ej1rg")
 
 [node name="Player" parent="." instance=ExtResource("3_cv8og")]
 position = Vector2(0, -71)
@@ -143,6 +157,8 @@ script = null
 position = Vector2(10, -4.5)
 scale = Vector2(1, 1.00389)
 shape = SubResource("RectangleShape2D_7q7ep")
+
+[node name="PauseMenu" parent="." instance=ExtResource("14_i2d2n")]
 
 [connection signal="input_event" from="Dumpster" to="." method="_on_dumpster_input_event"]
 [connection signal="input_event" from="CoupleBackyard" to="CoupleBackyard" method="_on_input_event"]

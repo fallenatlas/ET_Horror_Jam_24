@@ -19,6 +19,10 @@ func _ready():
 	suspicion = game_state.suspicion
 	print_debug(game_state.day_or_night + str(game_state.current_day))
 	Dialogic.signal_event.connect(_on_signal_event)
+	if game_state.day_or_night == "night":
+		get_node("ParallaxBackground/ParallaxLayer/Icon").visible = false
+		get_node("ParallaxBackground/ParallaxLayer/Night").visible = true
+		get_node("Lights").visible = true
 	get_node("Player").disable_y_movement()
 	get_node("Player").position.x = game_state.position_on_street
 	if game_state.visit_number == 0:

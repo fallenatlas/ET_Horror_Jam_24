@@ -73,6 +73,7 @@ directories/dtl_directory={
 "keepAway": "res://Timelines/keepAway.dtl",
 "needToGoHome": "res://Timelines/needToGoHome.dtl",
 "night1": "res://Timelines/night1/night1.dtl",
+"night1Outside": "res://Timelines/night1/night1Outside.dtl",
 "night1Scales": "res://Timelines/night1/night1Scales.dtl",
 "night1outside": "res://Timelines/night1/night1outside.dtl",
 "night2": "res://Timelines/night2/night2.dtl",
@@ -141,6 +142,11 @@ move_foward={
 move_backward={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":115,"echo":false,"script":null)
+]
+}
+pause_key={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

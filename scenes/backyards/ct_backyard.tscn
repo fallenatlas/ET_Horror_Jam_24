@@ -16,7 +16,11 @@ info = ExtResource("2_1awxl")
 others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_x3pmc"), ExtResource("4_e4mim"), ExtResource("5_4jeac"), ExtResource("6_5j5wy")])
 state = ExtResource("3_3v63q")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="DayBackground" type="Sprite2D" parent="."]
+texture = ExtResource("3_v5h1j")
+
+[node name="NightBackground" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("3_v5h1j")
 
 [node name="Camera2D" type="Camera2D" parent="."]

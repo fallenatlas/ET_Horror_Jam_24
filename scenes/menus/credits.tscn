@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs25cpy8gpl2q"]
+[gd_scene load_steps=4 format=3 uid="uid://cs25cpy8gpl2q"]
 
 [ext_resource type="Script" path="res://scenes/menus/credits.gd" id="1_1w7aa"]
-[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="1_5wnis"]
+[ext_resource type="Texture2D" uid="uid://bguxtv5g2cjjm" path="res://assets/street/IMG_2519.png" id="2_75gun"]
+[ext_resource type="Texture2D" uid="uid://ce4favknb5bfx" path="res://assets/street/IMG_2515.png" id="3_srk8d"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -11,6 +12,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1w7aa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -312.0
+offset_right = 3728.0
+offset_bottom = 649.0
+texture = ExtResource("2_75gun")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 2.0
+offset_right = 4053.0
+offset_bottom = 647.0
+texture = ExtResource("3_srk8d")
+expand_mode = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -38,13 +55,14 @@ Mariana Santos
 Sebastião Carvalho
 Tiago Antunes[center]"
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 533.0
-offset_top = 513.0
-offset_right = 661.0
-offset_bottom = 641.0
+offset_left = 532.0
+offset_top = 537.0
+offset_right = 662.0
+offset_bottom = 598.0
 scale = Vector2(0.720001, 0.720001)
-texture_normal = ExtResource("1_5wnis")
+theme_override_font_sizes/font_size = 20
+text = "Back"
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

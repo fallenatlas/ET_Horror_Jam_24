@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cjhapqe2ttrgw"]
+[gd_scene load_steps=15 format=3 uid="uid://cjhapqe2ttrgw"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_tffod"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="2_td5p2"]
@@ -9,8 +9,9 @@
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="5_4tr51"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="6_fk8ts"]
 [ext_resource type="Texture2D" uid="uid://dynj48hav4cgm" path="res://assets/backyards/nraBackyard.png" id="8_yk0we"]
+[ext_resource type="Texture2D" uid="uid://bg1e2gv1owqm1" path="res://assets/backyards/IMG_2542.png" id="9_8g45y"]
 [ext_resource type="Texture2D" uid="uid://couq3fodbrqlw" path="res://assets/objects/nra/taser.png" id="10_6ctk2"]
-[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="11_bfa33"]
+[ext_resource type="PackedScene" path="res://scenes/interactable_box.tscn" id="11_bfa33"]
 [ext_resource type="Resource" uid="uid://ddk8l4dcaobtt" path="res://custom_resources/objects/nra/nraTaser.tres" id="12_i7y6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3tqbo"]
@@ -22,8 +23,12 @@ info = ExtResource("2_td5p2")
 others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_smlve"), ExtResource("4_wuooo"), ExtResource("5_4tr51"), ExtResource("6_fk8ts")])
 state = ExtResource("3_uwtm5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="DayBackground" type="Sprite2D" parent="."]
 texture = ExtResource("8_yk0we")
+
+[node name="NightBackground" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_8g45y")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)

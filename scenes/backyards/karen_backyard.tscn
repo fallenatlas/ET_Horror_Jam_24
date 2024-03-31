@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="3_iw8yd"]
 [ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_xtcof"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="4_6ogpf"]
-[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="5_rsylx"]
+[ext_resource type="PackedScene" path="res://scenes/interactable_box.tscn" id="5_rsylx"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="5_vhajc"]
 [ext_resource type="Resource" uid="uid://pufgkpkxnaqt" path="res://custom_resources/objects/karen/karenPainting.tres" id="6_gynik"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="6_scxnf"]
@@ -21,7 +21,11 @@ info = ExtResource("2_1wbhq")
 others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_cxkvi"), ExtResource("4_6ogpf"), ExtResource("5_vhajc"), ExtResource("6_scxnf")])
 state = ExtResource("3_iw8yd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="DayBackground" type="Sprite2D" parent="."]
+texture = ExtResource("3_ckosd")
+
+[node name="NightBackground" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("3_ckosd")
 
 [node name="Camera2D" type="Camera2D" parent="."]

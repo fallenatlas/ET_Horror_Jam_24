@@ -17,6 +17,9 @@ func _ready():
 	if info.first_time_day:
 		info.first_time_day = false
 		state.visit_number += 1
+	if state.day_or_night == "night":
+		get_node("DayBackground").visible = false
+		get_node("NightBackground").visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
