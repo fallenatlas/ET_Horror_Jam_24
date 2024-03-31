@@ -64,13 +64,9 @@ func _investigate():
 	Dialogic.VAR.killed = killed
 	Dialogic.VAR.pronoun = pronoun_map[killed]
 	Dialogic.start("investigation" + str(suspicion))
-
-func _on_dumpster_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton && event.pressed:
-		Dialogic.start("dumpster")
 		
 func _can_enter_house():
-	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number >= 5
+	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number >= 0
 		
 func _need_to_go_home():
 	return (game_state.current_day > 1 && game_state.visit_number > 1) || game_state.visit_number == 5

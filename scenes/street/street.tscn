@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dif5pc5nhk4pc"]
+[gd_scene load_steps=27 format=3 uid="uid://dif5pc5nhk4pc"]
 
 [ext_resource type="Script" path="res://scripts/street/street.gd" id="1_0wohs"]
 [ext_resource type="Texture2D" uid="uid://bmbfpbgna63a7" path="res://assets/street/IMG_2520.png" id="2_267m8"]
@@ -13,6 +13,8 @@
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="9_v4wku"]
 [ext_resource type="Texture2D" uid="uid://ce4favknb5bfx" path="res://assets/street/IMG_2515.png" id="10_tmajc"]
 [ext_resource type="Script" path="res://scripts/backyards/nra_backyard.gd" id="11_27tvp"]
+[ext_resource type="Script" path="res://scripts/objects/interactable_object.gd" id="13_qe8b8"]
+[ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/rock.tres" id="14_b66h2"]
 [ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="14_i2d2n"]
 [ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="14_o8xl0"]
 
@@ -87,6 +89,8 @@ shape = SubResource("RectangleShape2D_xjw7d")
 
 [node name="Dumpster" type="Area2D" parent="."]
 position = Vector2(3054.5, -114)
+script = ExtResource("13_qe8b8")
+info = ExtResource("14_b66h2")
 
 [node name="Dumpster" type="CollisionShape2D" parent="Dumpster"]
 shape = SubResource("RectangleShape2D_1lh14")
@@ -162,7 +166,7 @@ shape = SubResource("RectangleShape2D_7q7ep")
 
 [node name="PauseMenu" parent="." instance=ExtResource("14_i2d2n")]
 
-[connection signal="input_event" from="Dumpster" to="." method="_on_dumpster_input_event"]
+[connection signal="input_event" from="Dumpster" to="Dumpster" method="_on_input_event"]
 [connection signal="input_event" from="CoupleBackyard" to="CoupleBackyard" method="_on_input_event"]
 [connection signal="input_event" from="KarenBackyard" to="KarenBackyard" method="_on_input_event"]
 [connection signal="input_event" from="NRABackyard" to="NRABackyard" method="_on_input_event"]
