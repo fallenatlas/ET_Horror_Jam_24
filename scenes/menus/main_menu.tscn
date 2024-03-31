@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4cll0jja86lk"]
+[gd_scene load_steps=5 format=3 uid="uid://b4cll0jja86lk"]
 
 [ext_resource type="Script" path="res://scenes/menus/main_menu.gd" id="1_4rilq"]
 [ext_resource type="Texture2D" uid="uid://bguxtv5g2cjjm" path="res://assets/street/IMG_2519.png" id="2_qj53b"]
 [ext_resource type="Texture2D" uid="uid://ce4favknb5bfx" path="res://assets/street/IMG_2515.png" id="3_4cki0"]
+[ext_resource type="FontFile" uid="uid://dvho3rxudygym" path="res://assets/impact.ttf" id="4_gvrsm"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -57,6 +58,7 @@ offset_right = 402.0
 offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_gvrsm")
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
 text = "[center]51st Street[center]"
@@ -78,6 +80,7 @@ theme_override_constants/margin_bottom = 10
 [node name="Start" type="Button" parent="VBoxContainer2/CenterContainer/VBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gvrsm")
 text = "Start"
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer2/CenterContainer/VBoxContainer"]
@@ -88,6 +91,7 @@ theme_override_constants/margin_bottom = 10
 [node name="Credit" type="Button" parent="VBoxContainer2/CenterContainer/VBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gvrsm")
 text = "Credits"
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer2/CenterContainer/VBoxContainer"]
@@ -98,6 +102,7 @@ theme_override_constants/margin_bottom = 10
 [node name="Exit" type="Button" parent="VBoxContainer2/CenterContainer/VBoxContainer/MarginContainer3"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gvrsm")
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer2/CenterContainer/VBoxContainer/MarginContainer/Start" to="." method="_on_start_pressed"]
