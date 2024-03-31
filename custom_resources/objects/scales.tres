@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="InteractableObject" load_steps=3 format=3 uid="uid://camt4h12tnols"]
 
-[ext_resource type="Texture2D" uid="uid://cqplpng6gr1de" path="res://assets/characters/ct/IMG_2501.png" id="1_m1cgb"]
+[ext_resource type="Texture2D" uid="uid://cq6tls4lemuvg" path="res://assets/objects/other/scales.png" id="1_au18m"]
 [ext_resource type="Script" path="res://scripts/objects/interactable_object_resource.gd" id="2_x3nii"]
 
 [resource]
 script = ExtResource("2_x3nii")
 found = false
-art = ExtResource("1_m1cgb")
-dialog_name = ""
+art = ExtResource("1_au18m")
+dialog_name = "night1Scales"
