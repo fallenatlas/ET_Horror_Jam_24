@@ -1,6 +1,5 @@
 extends Control
 
-@onready var scales : TextureButton = $ScalesToggle
 @onready var space_rock : TextureButton = $SpaceRockToggle
 @onready var drawing : TextureButton = $DrawingToggle
 @onready var rocket : TextureButton = $RocketToggle
@@ -13,7 +12,7 @@ extends Control
 @onready var metal : TextureButton = $MetalToggle
 
 @onready var correct_objects : Array = [metal, goo, painting]
-@onready var wrong_objects : Array = [scales, space_rock, drawing, rocket, fur, rat_poison, newspaper, ovni_photo]
+@onready var wrong_objects : Array = [space_rock, drawing, rocket, fur, rat_poison, newspaper, ovni_photo]
 
 var number_choices : int = 0
 var choices_correct : bool = true
