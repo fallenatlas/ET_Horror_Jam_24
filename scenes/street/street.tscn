@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ce4favknb5bfx" path="res://assets/street/IMG_2515.png" id="10_tmajc"]
 [ext_resource type="Script" path="res://scripts/backyards/nra_backyard.gd" id="11_27tvp"]
 [ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="11_gmi02"]
-[ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="12_xhg3b"]
+[ext_resource type="Resource" uid="uid://cyr6v4nr4vu8y" path="res://custom_resources/objects/couple/coupleMetal.tres" id="12_ohov0"]
 [ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="13_k61hp"]
 [ext_resource type="Script" path="res://scripts/objects/interactable_object.gd" id="13_qe8b8"]
 [ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/metal.tres" id="14_b66h2"]
@@ -61,7 +61,7 @@ script = ExtResource("1_0wohs")
 game_state = ExtResource("2_xxe25")
 backdoors = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("8_jwnxi"), ExtResource("6_ke5bg"), ExtResource("9_v4wku"), ExtResource("6_gd66b"), ExtResource("7_4a2hb")])
 scales = ExtResource("14_o8xl0")
-otherItems = Array[Resource("res://scripts/objects/interactable_object_resource.gd")]([ExtResource("9_2wla8"), ExtResource("10_5glk8"), ExtResource("11_gmi02"), ExtResource("12_xhg3b"), ExtResource("13_k61hp"), ExtResource("14_g61dm"), ExtResource("15_fw43f"), ExtResource("16_nj0dn"), ExtResource("17_v2qxa"), ExtResource("18_3xspe"), ExtResource("19_4pvf6")])
+otherItems = Array[Resource("res://scripts/objects/interactable_object_resource.gd")]([ExtResource("9_2wla8"), ExtResource("10_5glk8"), ExtResource("11_gmi02"), ExtResource("12_ohov0"), ExtResource("13_k61hp"), ExtResource("14_g61dm"), ExtResource("15_fw43f"), ExtResource("16_nj0dn"), ExtResource("17_v2qxa"), ExtResource("18_3xspe"), ExtResource("19_4pvf6")])
 
 [node name="Lights" type="Sprite2D" parent="."]
 visible = false

@@ -42,6 +42,7 @@ directories/dtl_directory={
 "continueInvestigation": "res://Timelines/continueInvestigation.dtl",
 "continueOutside": "res://Timelines/continueOutside.dtl",
 "coupleHouse": "res://Timelines/dialogues/coupleHouse.dtl",
+"coupleMetal": "res://Timelines/interactions/coupleMetal.dtl",
 "couplePainting": "res://Timelines/interactions/couplePainting.dtl",
 "couplePresentations": "res://Timelines/presentations/couplePresentations.dtl",
 "coupleWeirdGoo": "res://Timelines/interactions/coupleWeirdGoo.dtl",

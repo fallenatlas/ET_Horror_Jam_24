@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dokubky7wqncg"]
+[gd_scene load_steps=25 format=3 uid="uid://dokubky7wqncg"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_6hphy"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="2_j16l0"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="4_073w5"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="4_o0cab"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="5_ckrpp"]
-[ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="5_qmohj"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="6_bngyx"]
 [ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="8_m160d"]
 [ext_resource type="Resource" uid="uid://ckcsgtv2dcnq2" path="res://custom_resources/objects/astronaut/astronautSpaceRock.tres" id="9_vgc4b"]
@@ -21,6 +20,8 @@
 [ext_resource type="Resource" uid="uid://pufgkpkxnaqt" path="res://custom_resources/objects/karen/karenPainting.tres" id="14_67eg3"]
 [ext_resource type="Resource" uid="uid://cb0w6byler0n4" path="res://custom_resources/objects/karen/karenPoison.tres" id="15_7jowy"]
 [ext_resource type="Resource" uid="uid://ddk8l4dcaobtt" path="res://custom_resources/objects/nra/nraTaser.tres" id="16_064k2"]
+[ext_resource type="Resource" uid="uid://cyr6v4nr4vu8y" path="res://custom_resources/objects/couple/coupleMetal.tres" id="19_nn88e"]
+[ext_resource type="Texture2D" uid="uid://6d3xjou1vc7a" path="res://assets/objects/other/metal.png" id="22_7b83y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bns2q"]
 size = Vector2(159, 195)
@@ -47,7 +48,7 @@ zoom = Vector2(0.6, 0.6)
 
 [node name="InteractableBox" parent="." instance=ExtResource("4_073w5")]
 position = Vector2(1152.67, -189.765)
-info = ExtResource("5_qmohj")
+info = ExtResource("19_nn88e")
 
 [node name="CollisionShape2D" parent="InteractableBox" index="0"]
 position = Vector2(-1645.67, 42.7647)
@@ -84,7 +85,21 @@ position = Vector2(750, 58)
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("11_rn7xv")
 
+[node name="Metal" type="Sprite2D" parent="."]
+position = Vector2(-879, 343)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("22_7b83y")
+
+[node name="MetalArea" parent="." instance=ExtResource("4_073w5")]
+position = Vector2(1152.67, -189.765)
+info = ExtResource("19_nn88e")
+
+[node name="CollisionShape2D" parent="MetalArea" index="0"]
+position = Vector2(-2034.67, 533.765)
+shape = SubResource("RectangleShape2D_fvu4g")
+
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
 
 [editable path="InteractableBox"]
 [editable path="GooArea"]
+[editable path="MetalArea"]

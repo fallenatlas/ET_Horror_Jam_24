@@ -71,7 +71,7 @@ func _investigate():
 	Dialogic.start("investigation" + str(suspicion))
 		
 func _can_enter_house():
-	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number >= 0
+	return game_state.current_day > 1 || game_state.day_or_night != "day" || game_state.visit_number >= 5
 		
 func _need_to_go_home():
 	return (game_state.current_day > 1 && game_state.visit_number > 1) || game_state.visit_number == 5

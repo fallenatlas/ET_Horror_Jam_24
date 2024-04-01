@@ -12,7 +12,7 @@
 [ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="8_0jc1j"]
 [ext_resource type="Resource" uid="uid://ckcsgtv2dcnq2" path="res://custom_resources/objects/astronaut/astronautSpaceRock.tres" id="9_62ap2"]
 [ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="10_hjnun"]
-[ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="11_lq6ia"]
+[ext_resource type="Resource" uid="uid://cyr6v4nr4vu8y" path="res://custom_resources/objects/couple/coupleMetal.tres" id="11_mgxs4"]
 [ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="12_h53qe"]
 [ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="13_7gmqc"]
 [ext_resource type="Resource" uid="uid://cylcj3rcton0u" path="res://custom_resources/objects/ct/CTOvniPhoto.tres" id="14_e0o2u"]
@@ -25,7 +25,7 @@
 script = ExtResource("1_11hon")
 game_state = ExtResource("2_43vpj")
 others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_ifhjv"), ExtResource("4_3fdce"), ExtResource("5_upgsr"), ExtResource("6_0hrat"), ExtResource("7_4rtax")])
-ohterItems = Array[Resource("res://scripts/objects/interactable_object_resource.gd")]([ExtResource("8_0jc1j"), ExtResource("9_62ap2"), ExtResource("10_hjnun"), ExtResource("11_lq6ia"), ExtResource("12_h53qe"), ExtResource("13_7gmqc"), ExtResource("14_e0o2u"), ExtResource("15_ov1yq"), ExtResource("16_0w7gm"), ExtResource("17_a7qf3"), ExtResource("18_lnhrn")])
+ohterItems = Array[Resource("res://scripts/objects/interactable_object_resource.gd")]([ExtResource("8_0jc1j"), ExtResource("9_62ap2"), ExtResource("10_hjnun"), ExtResource("11_mgxs4"), ExtResource("12_h53qe"), ExtResource("13_7gmqc"), ExtResource("14_e0o2u"), ExtResource("15_ov1yq"), ExtResource("16_0w7gm"), ExtResource("17_a7qf3"), ExtResource("18_lnhrn")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7gi6r")

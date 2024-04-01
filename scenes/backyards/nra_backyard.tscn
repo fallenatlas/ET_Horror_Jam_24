@@ -13,8 +13,8 @@
 [ext_resource type="Resource" uid="uid://ckcsgtv2dcnq2" path="res://custom_resources/objects/astronaut/astronautSpaceRock.tres" id="9_tdnke"]
 [ext_resource type="Texture2D" uid="uid://couq3fodbrqlw" path="res://assets/objects/nra/taser.png" id="10_6ctk2"]
 [ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="10_kyixy"]
-[ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="11_5jbpr"]
 [ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="11_bfa33"]
+[ext_resource type="Resource" uid="uid://cyr6v4nr4vu8y" path="res://custom_resources/objects/couple/coupleMetal.tres" id="11_hvqfo"]
 [ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="12_50pj0"]
 [ext_resource type="Resource" uid="uid://ddk8l4dcaobtt" path="res://custom_resources/objects/nra/nraTaser.tres" id="12_i7y6h"]
 [ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="13_0emix"]
@@ -31,7 +31,7 @@ script = ExtResource("1_tffod")
 info = ExtResource("2_td5p2")
 others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_smlve"), ExtResource("4_wuooo"), ExtResource("5_4tr51"), ExtResource("6_fk8ts")])
 state = ExtResource("3_uwtm5")
-otherItems = Array[Resource("res://scripts/objects/interactable_object_resource.gd")]([ExtResource("8_rjly5"), ExtResource("9_tdnke"), ExtResource("10_kyixy"), ExtResource("11_5jbpr"), ExtResource("12_50pj0"), ExtResource("13_0emix"), ExtResource("14_fbgy2"), ExtResource("15_011ix"), ExtResource("16_g2kbl"), ExtResource("17_awh8j")])
+otherItems = Array[Resource("res://scripts/objects/interactable_object_resource.gd")]([ExtResource("8_rjly5"), ExtResource("9_tdnke"), ExtResource("10_kyixy"), ExtResource("11_hvqfo"), ExtResource("12_50pj0"), ExtResource("13_0emix"), ExtResource("14_fbgy2"), ExtResource("15_011ix"), ExtResource("16_g2kbl"), ExtResource("17_awh8j")])
 
 [node name="DayBackground" type="Sprite2D" parent="."]
 texture = ExtResource("8_yk0we")
