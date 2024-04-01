@@ -8,121 +8,12 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "1",
+"default_portrait": "",
 "description": "",
-"display_name": "Player",
+"display_name": "You",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
-"portraits": {
-"1": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/1.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"10": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/10.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"11": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/11.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"12": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/12.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"2": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/2.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"3": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/3.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"4": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/4.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"5": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/5.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"6": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/6.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"7": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/7.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"8": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/8.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"9": {
-"export_overrides": {
-"image": "\"res://assets/characters/player/9.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-}
-},
+"portraits": {},
 "scale": 1.0
 }

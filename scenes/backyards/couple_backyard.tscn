@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dokubky7wqncg"]
+[gd_scene load_steps=15 format=3 uid="uid://dokubky7wqncg"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_6hphy"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="2_j16l0"]
@@ -10,9 +10,14 @@
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="5_ckrpp"]
 [ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="5_qmohj"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="6_bngyx"]
+[ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="11_4hf5k"]
+[ext_resource type="Texture2D" uid="uid://bq3gayc7cc7v3" path="res://assets/objects/couple/goo.png" id="11_rn7xv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bns2q"]
 size = Vector2(159, 195)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvu4g"]
+size = Vector2(66, 71.5)
 
 [node name="KarenBackyard" type="Node2D"]
 script = ExtResource("1_6hphy")
@@ -38,6 +43,14 @@ info = ExtResource("5_qmohj")
 position = Vector2(-1645.67, 42.7647)
 shape = SubResource("RectangleShape2D_bns2q")
 
+[node name="GooArea" parent="." instance=ExtResource("4_073w5")]
+position = Vector2(1152.67, -189.765)
+info = ExtResource("11_4hf5k")
+
+[node name="CollisionShape2D" parent="GooArea" index="0"]
+position = Vector2(-405.67, 248.765)
+shape = SubResource("RectangleShape2D_fvu4g")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ExitButton" type="Button" parent="CanvasLayer"]
@@ -56,6 +69,12 @@ scale = Vector2(0.400001, 0.400001)
 theme_override_font_sizes/font_size = 40
 text = "Back"
 
+[node name="WeirdGoo" type="Sprite2D" parent="."]
+position = Vector2(750, 58)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("11_rn7xv")
+
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
 
 [editable path="InteractableBox"]
+[editable path="GooArea"]

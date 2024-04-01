@@ -16,7 +16,7 @@
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="7_jxt6y"]
 [ext_resource type="Resource" uid="uid://dmhsgp2xgtk1l" path="res://custom_resources/characters/couple.tres" id="8_uxkof"]
 [ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="11_r3l00"]
-[ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/rock.tres" id="12_cb4w8"]
+[ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/metal.tres" id="12_cb4w8"]
 [ext_resource type="Resource" uid="uid://dgvnco285l0a2" path="res://custom_resources/characters/karen.tres" id="15_641nw"]
 [ext_resource type="Resource" uid="uid://dvjuuq6sg6se" path="res://custom_resources/characters/nra.tres" id="16_6bafb"]
 [ext_resource type="Resource" uid="uid://duxdyyxoxkw30" path="res://custom_resources/characters/astronaut.tres" id="17_1w3kr"]
@@ -84,7 +84,7 @@ offset_top = -256.0
 offset_right = 844.0
 offset_bottom = -115.0
 theme_override_font_sizes/font_size = 30
-text = "Exit"
+text = "Go to sleep"
 
 [node name="Suspects" type="RichTextLabel" parent="."]
 offset_left = -485.0
