@@ -23,9 +23,9 @@
 [ext_resource type="FontFile" uid="uid://dvho3rxudygym" path="res://assets/impact.ttf" id="20_01fhh"]
 [ext_resource type="Resource" uid="uid://i6u3cnt1lprh" path="res://custom_resources/objects/karen/karenFur.tres" id="20_vvxij"]
 [ext_resource type="Resource" uid="uid://cb0w6byler0n4" path="res://custom_resources/objects/karen/karenPoison.tres" id="21_s2nar"]
+[ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="21_tf681"]
 [ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="22_51ggc"]
 [ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="22_de4ad"]
-[ext_resource type="Resource" uid="uid://cyr6v4nr4vu8y" path="res://custom_resources/objects/couple/coupleMetal.tres" id="22_tvfya"]
 [ext_resource type="Resource" uid="uid://cylcj3rcton0u" path="res://custom_resources/objects/ct/CTOvniPhoto.tres" id="23_61uum"]
 [ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="24_drua0"]
 [ext_resource type="Resource" uid="uid://pufgkpkxnaqt" path="res://custom_resources/objects/karen/karenPainting.tres" id="25_a02g0"]
@@ -341,7 +341,7 @@ offset_bottom = 1917.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
 script = ExtResource("6_r0wbb")
-object = ExtResource("22_tvfya")
+object = ExtResource("21_tf681")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/DrawingToggle"]
 z_as_relative = false
