@@ -5,7 +5,8 @@ extends Node
 @export var game_state : GameStateResource
 
 func _need_to_go_home():
-	return game_state.current_day > 1 && game_state.visit_number > 1
+	return (game_state.current_day > 1 && game_state.visit_number > 1) || \
+	(game_state.current_day == 1 && game_state.visit_number == 5)
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:

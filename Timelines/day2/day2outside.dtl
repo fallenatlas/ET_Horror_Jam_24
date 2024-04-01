@@ -10,7 +10,7 @@ join Astronaut 2
 Astronaut: Where did you find this?
 leave Astronaut
 join player 2
-player: It was on the street last night. I heard some strange noises, and when I went to check them out I found this.
+player: It was on the street last night. I heard some strange noises, and when I went to check them out I found this weird scales.
 leave player
 join Astronaut 2
 Astronaut: Oh no… This is really bad…
