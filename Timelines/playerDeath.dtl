@@ -1,13 +1,28 @@
+join Astronaut 2
+aliens: ...
+leave Astronaut
+join player 2
+player: Mr Johnson? How? What's going on?
+leave player
+[Karen enters the house]
+join Karen 2
+aliens: It's simple dear...
+leave Karen
+[Aliens take off skins]
+join player 2
+join Darla (aliens) 2
+aliens: ...
+leave Darla
 join player 2
 player: Wait…
 player: Matt and Darla? But… I thought there was only one alien…
 leave player
-join Darla 2
+join Darla (aliens) 2
 Darla: That’s where you were wrong, little kid. We knew you’d never figure this out. You humans are way inferior to us.
 Matt: Now, it’s feeding time. And then, a new town, new names, new prey…
 leave Darla
 join player 2
 player: NOOOOOOO!
 leave player
-[You died]
+[You were eaten by the Aliens]
 [signal arg="endGame"]

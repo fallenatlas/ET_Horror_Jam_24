@@ -28,6 +28,7 @@ directories/dch_directory={
 "Karen": "res://Characters/Karen.dch",
 "Matt": "res://Characters/Matt.dch",
 "NRA": "res://Characters/NRA.dch",
+"aliens": "res://assets/characters/couple/aliens.dch",
 "player": "res://Characters/player.dch"
 }
 directories/dtl_directory={
