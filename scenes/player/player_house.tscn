@@ -634,6 +634,7 @@ offset_right = 2066.0
 offset_bottom = 1921.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
+stretch_mode = 3
 script = ExtResource("6_r0wbb")
 object = ExtResource("25_a02g0")
 
