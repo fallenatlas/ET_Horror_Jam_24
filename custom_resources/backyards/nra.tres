@@ -7,3 +7,4 @@ script = ExtResource("1_cw52h")
 first_time = true
 first_time_day = true
 owner = "nra"
+alive = true

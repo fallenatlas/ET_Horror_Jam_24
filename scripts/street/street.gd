@@ -4,6 +4,7 @@ var day_limit = 5
 @export var game_state : GameStateResource
 @export var backdoors : Array[Backyard_Resource]
 @export var scales : InteractableObject
+@export var otherItems: Array[InteractableObject] # just to save them
 var suspicion
 var alienFaced = false
 
@@ -16,6 +17,7 @@ var pronoun_map = {
 	"Charlotte" : "She"
 }
 var house_death_order = ["astronaut", "ct", "nra", "couple"]
+var house_death_position = [2569, -2773, 1500, -1103]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,6 +31,7 @@ func _ready():
 	get_node("Player").disable_y_movement()
 	get_node("Player").position.x = game_state.position_on_street
 	if game_state.current_day > 1 && game_state.day_or_night == "night":
+		_instantiate_blood()
 		game_state.killed = house_death_order[game_state.current_day - 2]
 	if _need_scales_found():
 		_instantiate_scales()	
@@ -109,6 +112,13 @@ func _scales_found():
 func _instantiate_scales():
 	var scales = load("res://scenes/scales.tscn")
 	var instance = scales.instantiate()
+	add_child(instance)
+
+func _instantiate_blood():
+	var blood = load("res://scenes/street/blood.tscn")
+	var instance = blood.instantiate()
+	var i = game_state.current_day - 2
+	instance.position = Vector2(house_death_position[i], 0)
 	add_child(instance)
 
 func _end_game(): # called when death or jail

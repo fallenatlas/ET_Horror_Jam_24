@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bsreh6ik0lf04"]
+[gd_scene load_steps=27 format=3 uid="uid://bsreh6ik0lf04"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_raw3p"]
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="2_x6msp"]
@@ -7,13 +7,21 @@
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="4_8bfe6"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="5_oekyo"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="6_d32ih"]
+[ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="8_3mifr"]
 [ext_resource type="Texture2D" uid="uid://ggomwdn25vkd" path="res://assets/backyards/astronautBackyard.png" id="8_4sa18"]
+[ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="9_30wgk"]
 [ext_resource type="Texture2D" uid="uid://d2ljnjjjyb1wj" path="res://assets/objects/astronaut/rocket.png" id="10_0pg1p"]
+[ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="10_8ud1h"]
 [ext_resource type="Texture2D" uid="uid://dew02a0txxsgm" path="res://assets/objects/astronaut/weirdDrawing.png" id="11_7cxsj"]
 [ext_resource type="Texture2D" uid="uid://dbjdbltmca43d" path="res://assets/objects/other/rock.png" id="11_hrip2"]
+[ext_resource type="Resource" uid="uid://cylcj3rcton0u" path="res://custom_resources/objects/ct/CTOvniPhoto.tres" id="11_nc2vh"]
 [ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="12_gg0ug"]
+[ext_resource type="Resource" uid="uid://i6u3cnt1lprh" path="res://custom_resources/objects/karen/karenFur.tres" id="12_y2xnv"]
 [ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="13_0wq6r"]
+[ext_resource type="Resource" uid="uid://pufgkpkxnaqt" path="res://custom_resources/objects/karen/karenPainting.tres" id="13_hiks7"]
+[ext_resource type="Resource" uid="uid://cb0w6byler0n4" path="res://custom_resources/objects/karen/karenPoison.tres" id="14_3fh76"]
 [ext_resource type="Resource" uid="uid://cwwk3117qgnlt" path="res://custom_resources/objects/astronaut/astronautWeirdDrawing.tres" id="14_n50nd"]
+[ext_resource type="Resource" uid="uid://ddk8l4dcaobtt" path="res://custom_resources/objects/nra/nraTaser.tres" id="15_0d7g1"]
 [ext_resource type="Resource" uid="uid://ckcsgtv2dcnq2" path="res://custom_resources/objects/astronaut/astronautSpaceRock.tres" id="16_og5tf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bx8e"]
@@ -30,6 +38,7 @@ script = ExtResource("1_raw3p")
 info = ExtResource("2_x6msp")
 others = Array[Resource("res://scripts/backyards/backyard_resource.gd")]([ExtResource("3_pjia1"), ExtResource("4_8bfe6"), ExtResource("5_oekyo"), ExtResource("6_d32ih")])
 state = ExtResource("3_lipql")
+otherItems = Array[Resource("res://scripts/objects/interactable_object_resource.gd")]([ExtResource("8_3mifr"), ExtResource("9_30wgk"), ExtResource("10_8ud1h"), ExtResource("11_nc2vh"), ExtResource("12_y2xnv"), ExtResource("13_hiks7"), ExtResource("14_3fh76"), ExtResource("15_0d7g1")])
 
 [node name="DayBackground" type="Sprite2D" parent="."]
 texture = ExtResource("8_4sa18")

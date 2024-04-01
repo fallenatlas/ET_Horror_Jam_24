@@ -3,6 +3,7 @@ extends Node2D
 @export var info : Backyard_Resource
 @export var others : Array[Backyard_Resource]
 @export var state : GameStateResource
+@export var otherItems: Array[InteractableObject]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

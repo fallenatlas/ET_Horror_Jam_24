@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="InteractableObject" load_steps=4 format=3 uid="uid://srxwg7ucujbc"]
 
-[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="1_48w0i"]
+[ext_resource type="Texture2D" uid="uid://bq3gayc7cc7v3" path="res://assets/objects/couple/goo.png" id="1_ng108"]
 [ext_resource type="Script" path="res://scripts/objects/interactable_object_resource.gd" id="2_rb5gi"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="3_pc6oj"]
 
 [resource]
 script = ExtResource("2_rb5gi")
 found = false
-art = ExtResource("1_48w0i")
+art = ExtResource("1_ng108")
 dialog_name = "coupleWeirdGoo"
 state = ExtResource("3_pc6oj")

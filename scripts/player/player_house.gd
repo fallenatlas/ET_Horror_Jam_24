@@ -15,6 +15,8 @@ func _on_signal_event(argument : String):
 	match argument:
 		"changeDay":
 			_on_exit_button_pressed()
+		"endGame":
+			get_tree().change_scene_to_file("res://scenes/menus/main_menu.tscn")
 
 func _on_call_button_pressed():
 	if characters.right_choices() and objects.right_choices():

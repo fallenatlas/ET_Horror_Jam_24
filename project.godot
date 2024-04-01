@@ -92,6 +92,7 @@ directories/dtl_directory={
 "nraHouse": "res://Timelines/dialogues/nraHouse.dtl",
 "nraPresentations": "res://Timelines/presentations/nraPresentations.dtl",
 "nraTaser": "res://Timelines/interactions/nraTaser.dtl",
+"ownerDead": "res://Timelines/ownerDead.dtl",
 "playerDeath": "res://Timelines/playerDeath.dtl"
 }
 text/letter_speed=0.01

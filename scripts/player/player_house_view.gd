@@ -2,6 +2,7 @@ extends Node
 
 @export var game_state : GameStateResource
 @export var others : Array[Backyard_Resource]
+@export var ohterItems : Array[InteractableObject]
 var day_limit = 5
 var suspicion = 0
 
@@ -32,6 +33,8 @@ func _change_day_and_night():
 	print_debug(game_state.day_or_night + str(game_state.current_day))
 	var dialog_name = _get_prefix()
 	print_debug("changed to " + dialog_name)
+	if game_state.day_or_night == "night" and game_state.current_day > 1:
+		_block_yard()
 	Dialogic.start(dialog_name)
 	
 func _on_exit_button_pressed():
@@ -39,6 +42,10 @@ func _on_exit_button_pressed():
 		Dialogic.start("exitHouse")
 	else:
 		_exit_house()
+
+func _block_yard():
+	others[game_state.current_day - 2].alive = false
+			
 
 func _player_death():
 	Dialogic.start("playerDeath")

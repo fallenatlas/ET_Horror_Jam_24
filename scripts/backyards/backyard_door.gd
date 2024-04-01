@@ -17,6 +17,9 @@ func _on_input_event(viewport, event, shape_idx):
 				Dialogic.start("invadeAtNight")
 			else:
 				Dialogic.start("investigate")
+				
+		elif ! info.alive:
+			Dialogic.start("ownerDead")
 		else:
 			get_parent().save_player_position(exit_position)
 			var scene_name = "res://scenes/backyards/" + info.owner + "_backyard.tscn"

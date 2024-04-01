@@ -7,3 +7,4 @@ script = ExtResource("1_gbrtw")
 first_time = true
 first_time_day = true
 owner = "ct"
+alive = true
