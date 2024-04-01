@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://scripts/backyards/nra_backyard.gd" id="11_27tvp"]
 [ext_resource type="Script" path="res://scripts/objects/interactable_object.gd" id="13_qe8b8"]
 [ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/rock.tres" id="14_b66h2"]
-[ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="14_i2d2n"]
+[ext_resource type="PackedScene" uid="uid://ce4efle10qkg5" path="res://scenes/menus/pause_menu.tscn" id="14_i2d2n"]
 [ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="14_o8xl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjw7d"]

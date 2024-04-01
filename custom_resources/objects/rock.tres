@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_hn33h")
-found = true
+found = false
 art = ExtResource("1_yt26n")
 dialog_name = "dumpster"
 state = ExtResource("3_l4qc8")

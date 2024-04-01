@@ -37,5 +37,8 @@ func update_buttons():
 func right_choices() -> bool:
 	return choices_correct
 
+func no_choices() -> bool:
+	return number_choices == 0
+
 func enough_choices() -> bool:
 	return number_choices == correct_objects.size()

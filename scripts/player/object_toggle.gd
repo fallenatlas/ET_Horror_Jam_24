@@ -2,6 +2,7 @@ extends TextureButton
 
 @onready var objects = get_parent()
 @onready var select_indicator = $SelectIndicator
+@onready var question_mark = $Label
 
 @export var object : InteractableObject #resource
 
@@ -11,7 +12,9 @@ func _ready():
 		texture_normal = object.art
 	else:
 		set_disabled(true)
-		texture_disabled = load("res://icon.svg") #question mark?
+		#texture_disabled = load("res://assets/question_mark.jpg")
+		question_mark.visible = true
+		
 	select_indicator.visible = false
 
 func _on_toggled(toggled_on):

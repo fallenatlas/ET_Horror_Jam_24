@@ -21,7 +21,7 @@ func _on_call_button_pressed():
 		Dialogic.start("goodAccusation")
 	elif not characters.enough_choices():
 		Dialogic.start("needSuspect")
-	elif not objects.enough_choices():
+	elif objects.no_choices():
 		Dialogic.start("needEvidence")
 	else:
 		Dialogic.start("falseAccusation")

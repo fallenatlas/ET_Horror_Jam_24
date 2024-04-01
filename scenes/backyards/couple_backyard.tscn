@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dokubky7wqncg"]
+[gd_scene load_steps=12 format=3 uid="uid://dokubky7wqncg"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_6hphy"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="2_j16l0"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="3_4kdpq"]
 [ext_resource type="Texture2D" uid="uid://n8iitkuvnt5b" path="res://assets/backyards/coupleBackyard.png" id="3_cdp6r"]
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="3_jo2g3"]
-[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_mddeg"]
-[ext_resource type="PackedScene" path="res://scenes/interactable_box.tscn" id="4_073w5"]
+[ext_resource type="PackedScene" uid="uid://dj12puj75f3xf" path="res://scenes/interactable_box.tscn" id="4_073w5"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="4_o0cab"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="5_ckrpp"]
 [ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="5_qmohj"]
@@ -41,20 +40,21 @@ shape = SubResource("RectangleShape2D_bns2q")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ExitButton" type="TextureButton" parent="CanvasLayer"]
+[node name="ExitButton" type="Button" parent="CanvasLayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 455.0
-offset_top = -116.0
-offset_right = 583.0
-offset_bottom = 12.0
+offset_left = 439.0
+offset_top = -99.0
+offset_right = 647.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.400001, 0.400001)
-texture_normal = ExtResource("3_mddeg")
+theme_override_font_sizes/font_size = 40
+text = "Back"
 
 [connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
 

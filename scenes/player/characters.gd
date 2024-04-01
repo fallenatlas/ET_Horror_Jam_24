@@ -33,3 +33,9 @@ func right_choices() -> bool:
 
 func enough_choices() -> bool:
 	return number_choices == correct_characters.size()
+	
+func deselect_others() -> void:
+	for o in wrong_characters:
+		o.deselect()
+	for o in correct_characters:
+		o.deselect()

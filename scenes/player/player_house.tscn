@@ -1,8 +1,7 @@
-[gd_scene load_steps=33 format=3 uid="uid://d3yrhdr34bure"]
+[gd_scene load_steps=37 format=3 uid="uid://d3yrhdr34bure"]
 
 [ext_resource type="Script" path="res://scripts/player/player_house.gd" id="1_tc0cl"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="2_8p30u"]
-[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="2_78cl7"]
 [ext_resource type="Texture2D" uid="uid://bwmactn6lx428" path="res://assets/player_house/IMG_2543.png" id="2_gw5nf"]
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="3_3c5oi"]
 [ext_resource type="Texture2D" uid="uid://cqplpng6gr1de" path="res://assets/characters/ct/IMG_2501.png" id="3_c73bt"]
@@ -22,9 +21,12 @@
 [ext_resource type="Resource" uid="uid://dvjuuq6sg6se" path="res://custom_resources/characters/nra.tres" id="16_6bafb"]
 [ext_resource type="Resource" uid="uid://duxdyyxoxkw30" path="res://custom_resources/characters/astronaut.tres" id="17_1w3kr"]
 [ext_resource type="Resource" uid="uid://ckcsgtv2dcnq2" path="res://custom_resources/objects/astronaut/astronautSpaceRock.tres" id="18_e64pf"]
+[ext_resource type="FontFile" uid="uid://dvho3rxudygym" path="res://assets/impact.ttf" id="20_01fhh"]
 [ext_resource type="Resource" uid="uid://i6u3cnt1lprh" path="res://custom_resources/objects/karen/karenFur.tres" id="20_vvxij"]
+[ext_resource type="Resource" uid="uid://c7aib8b2rikwe" path="res://custom_resources/objects/couple/couplePainting.tres" id="21_gtl2e"]
 [ext_resource type="Resource" uid="uid://cb0w6byler0n4" path="res://custom_resources/objects/karen/karenPoison.tres" id="21_s2nar"]
 [ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="22_51ggc"]
+[ext_resource type="Resource" uid="uid://58gf7pewp4uc" path="res://custom_resources/objects/astronaut/astronautRocketModel.tres" id="22_de4ad"]
 [ext_resource type="Resource" uid="uid://cylcj3rcton0u" path="res://custom_resources/objects/ct/CTOvniPhoto.tres" id="23_61uum"]
 [ext_resource type="Resource" uid="uid://srxwg7ucujbc" path="res://custom_resources/objects/couple/coupleWeirdGoo.tres" id="24_drua0"]
 [ext_resource type="Resource" uid="uid://pufgkpkxnaqt" path="res://custom_resources/objects/karen/karenPainting.tres" id="25_a02g0"]
@@ -39,11 +41,20 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="Gradient" id="Gradient_4ye6e"]
-offsets = PackedFloat32Array(0.564935, 0.571429, 0.668831, 0.688312, 0.694805)
+offsets = PackedFloat32Array(0.564935, 0.564935, 0.668831, 0.688312, 0.694805)
 colors = PackedColorArray(0.643137, 0, 0, 0, 0.643137, 0, 0, 1, 0.643137, 0, 0, 1, 0.760784, 0.333333, 0.333333, 1, 0.47788, 0.47788, 0.47788, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_glomn"]
 gradient = SubResource("Gradient_4ye6e")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_b7t7s"]
+offsets = PackedFloat32Array(0.337662, 0.37013, 0.655844, 0.688312)
+colors = PackedColorArray(0.389822, 0.375047, 0.364564, 0, 0.639216, 0, 0, 1, 0.639216, 0, 0, 1, 0.427493, 0.427493, 0.427493, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u8ef2"]
+gradient = SubResource("Gradient_b7t7s")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
@@ -58,25 +69,29 @@ texture = ExtResource("2_gw5nf")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)
 
-[node name="CallButton" type="TextureButton" parent="."]
-offset_left = -824.0
+[node name="CallButton" type="Button" parent="."]
+offset_left = -850.0
 offset_top = -257.0
-offset_right = -696.0
-offset_bottom = -129.0
-texture_normal = ExtResource("2_78cl7")
+offset_right = -670.0
+offset_bottom = -115.0
+theme_override_font_sizes/font_size = 30
+text = "Call
+Police"
 
-[node name="ExitButton" type="TextureButton" parent="."]
-offset_left = 687.0
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 658.0
 offset_top = -256.0
-offset_right = 815.0
-offset_bottom = -128.0
-texture_normal = ExtResource("2_78cl7")
+offset_right = 844.0
+offset_bottom = -115.0
+theme_override_font_sizes/font_size = 30
+text = "Exit"
 
 [node name="Suspects" type="RichTextLabel" parent="."]
 offset_left = -485.0
 offset_top = 111.0
 offset_right = 470.0
 offset_bottom = 191.0
+theme_override_fonts/normal_font = ExtResource("20_01fhh")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "[center]Suspects[center]"
@@ -87,10 +102,10 @@ anchors_preset = 0
 offset_top = 74.0
 offset_right = 40.0
 offset_bottom = 114.0
+scale = Vector2(1.16, 1.16)
 script = ExtResource("4_ebmus")
 
 [node name="CTToggle" type="TextureButton" parent="Characters"]
-z_index = 1
 layout_mode = 0
 offset_left = -506.0
 offset_top = 101.0
@@ -126,18 +141,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
+offset_left = -112.461
+offset_top = -1016.74
+offset_right = -48.4612
+offset_bottom = -952.744
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(24.5002, 24.5002)
+scale = Vector2(8.12128, 8.12128)
 pivot_offset = Vector2(32, 32)
-texture = SubResource("GradientTexture2D_glomn")
+texture = SubResource("GradientTexture2D_u8ef2")
 
 [node name="CoupleToggle" type="TextureButton" parent="Characters"]
-z_index = 1
 layout_mode = 0
 offset_left = -284.0
 offset_top = 101.0
@@ -151,16 +165,23 @@ character = ExtResource("8_uxkof")
 
 [node name="SelectIndicator" type="TextureRect" parent="Characters/CoupleToggle"]
 z_as_relative = false
-layout_mode = 0
-offset_left = 187.496
-offset_top = 649.985
-offset_right = 251.496
-offset_bottom = 713.985
-scale = Vector2(24.5002, 24.5002)
-texture = SubResource("GradientTexture2D_glomn")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.461
+offset_top = -1016.74
+offset_right = -48.4612
+offset_bottom = -952.744
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8.12128, 8.12128)
+pivot_offset = Vector2(32, 32)
+texture = SubResource("GradientTexture2D_u8ef2")
 
 [node name="KarenToggle" type="TextureButton" parent="Characters"]
-z_index = 1
 layout_mode = 0
 offset_left = -69.0
 offset_top = 106.0
@@ -180,18 +201,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
+offset_left = -112.461
+offset_top = -1016.74
+offset_right = -48.4612
+offset_bottom = -952.744
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(24.5002, 24.5002)
+scale = Vector2(8.12128, 8.12128)
 pivot_offset = Vector2(32, 32)
-texture = SubResource("GradientTexture2D_glomn")
+texture = SubResource("GradientTexture2D_u8ef2")
 
 [node name="NRAToggle" type="TextureButton" parent="Characters"]
-z_index = 1
 layout_mode = 0
 offset_left = 152.0
 offset_top = 101.0
@@ -211,18 +231,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
+offset_left = -112.461
+offset_top = -1016.74
+offset_right = -48.4612
+offset_bottom = -952.744
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(24.5002, 24.5002)
+scale = Vector2(8.12128, 8.12128)
 pivot_offset = Vector2(32, 32)
-texture = SubResource("GradientTexture2D_glomn")
+texture = SubResource("GradientTexture2D_u8ef2")
 
 [node name="AstronautToggle" type="TextureButton" parent="Characters"]
-z_index = 1
 layout_mode = 0
 offset_left = 367.0
 offset_top = 101.0
@@ -242,21 +261,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
+offset_left = -112.461
+offset_top = -1016.74
+offset_right = -48.4612
+offset_bottom = -952.744
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(24.5002, 24.5002)
+scale = Vector2(8.12128, 8.12128)
 pivot_offset = Vector2(32, 32)
-texture = SubResource("GradientTexture2D_glomn")
+texture = SubResource("GradientTexture2D_u8ef2")
 
 [node name="Evidence" type="RichTextLabel" parent="."]
 offset_left = -485.0
 offset_top = -349.0
 offset_right = 470.0
 offset_bottom = -269.0
+theme_override_fonts/normal_font = ExtResource("20_01fhh")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "[center]Evidence[center]"
@@ -264,9 +284,10 @@ text = "[center]Evidence[center]"
 [node name="Objects" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 29.0
+offset_top = 46.0
 offset_right = 40.0
-offset_bottom = 69.0
+offset_bottom = 86.0
+scale = Vector2(1.08, 1.08)
 script = ExtResource("6_65r3x")
 
 [node name="ScalesToggle" type="TextureButton" parent="Objects"]
@@ -278,7 +299,6 @@ offset_right = 1180.0
 offset_bottom = 1917.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("11_r3l00")
 
@@ -300,6 +320,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/ScalesToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="SpaceRockToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -309,7 +341,6 @@ offset_right = 1058.0
 offset_bottom = 2086.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("18_e64pf")
 
@@ -331,6 +362,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/SpaceRockToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="DrawingToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -340,9 +383,8 @@ offset_right = 1391.0
 offset_bottom = 1917.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("21_gtl2e")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/DrawingToggle"]
 z_as_relative = false
@@ -362,6 +404,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/DrawingToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="RocketToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -371,9 +425,8 @@ offset_right = 1264.0
 offset_bottom = 2088.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
-object = ExtResource("12_cb4w8")
+object = ExtResource("22_de4ad")
 
 [node name="SelectIndicator" type="TextureRect" parent="Objects/RocketToggle"]
 z_as_relative = false
@@ -393,6 +446,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/RocketToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="FurToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -402,7 +467,6 @@ offset_right = 1602.0
 offset_bottom = 1923.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("20_vvxij")
 
@@ -424,6 +488,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/FurToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="RatPoisonToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -433,7 +509,6 @@ offset_right = 1476.0
 offset_bottom = 2084.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("21_s2nar")
 
@@ -455,6 +530,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/RatPoisonToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="NewspaperToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -464,7 +551,6 @@ offset_right = 1711.0
 offset_bottom = 2082.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("22_51ggc")
 
@@ -486,6 +572,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/NewspaperToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="OvniPhotoToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -495,7 +593,6 @@ offset_right = 1842.0
 offset_bottom = 1918.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("23_61uum")
 
@@ -517,6 +614,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/OvniPhotoToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="GooToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -526,7 +635,6 @@ offset_right = 1931.0
 offset_bottom = 2088.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("24_drua0")
 
@@ -548,6 +656,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/GooToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="PaintingToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -557,7 +677,6 @@ offset_right = 2066.0
 offset_bottom = 1921.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("25_a02g0")
 
@@ -579,6 +698,18 @@ scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
 
+[node name="Label" type="Label" parent="Objects/PaintingToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
+
 [node name="MetalToggle" type="TextureButton" parent="Objects"]
 z_index = 1
 layout_mode = 0
@@ -588,7 +719,6 @@ offset_right = 2148.0
 offset_bottom = 2087.0
 scale = Vector2(0.0800018, 0.0800018)
 toggle_mode = true
-texture_normal = ExtResource("3_c73bt")
 script = ExtResource("6_r0wbb")
 object = ExtResource("12_cb4w8")
 
@@ -609,6 +739,18 @@ grow_vertical = 2
 scale = Vector2(24.5002, 24.5002)
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture2D_glomn")
+
+[node name="Label" type="Label" parent="Objects/MetalToggle"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("20_01fhh")
+theme_override_font_sizes/font_size = 1500
+text = "  ?"
 
 [connection signal="pressed" from="CallButton" to="." method="_on_call_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

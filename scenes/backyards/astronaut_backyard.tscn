@@ -1,10 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://bsreh6ik0lf04"]
+[gd_scene load_steps=19 format=3 uid="uid://bsreh6ik0lf04"]
 
 [ext_resource type="Script" path="res://scripts/backyards/backyard.gd" id="1_raw3p"]
 [ext_resource type="Resource" uid="uid://eppqu4usonje" path="res://custom_resources/backyards/astronaut.tres" id="2_x6msp"]
 [ext_resource type="Resource" uid="uid://bcyf3fsoo2glv" path="res://custom_resources/default_state.tres" id="3_lipql"]
 [ext_resource type="Resource" uid="uid://c5p1dw73vnscp" path="res://custom_resources/backyards/couple.tres" id="3_pjia1"]
-[ext_resource type="Texture2D" uid="uid://dthpo0u5oh5wb" path="res://icon.svg" id="3_wgy0u"]
 [ext_resource type="Resource" uid="uid://c3jpmfbv0xfhr" path="res://custom_resources/backyards/ct.tres" id="4_8bfe6"]
 [ext_resource type="Resource" uid="uid://b08f6cikyy3hw" path="res://custom_resources/backyards/karen.tres" id="5_oekyo"]
 [ext_resource type="Resource" uid="uid://c4kukse2kmn6p" path="res://custom_resources/backyards/nra.tres" id="6_d32ih"]
@@ -44,20 +43,21 @@ zoom = Vector2(0.6, 0.6)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ExitButton" type="TextureButton" parent="CanvasLayer"]
+[node name="ExitButton" type="Button" parent="CanvasLayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 455.0
-offset_top = -116.0
-offset_right = 583.0
-offset_bottom = 12.0
+offset_left = 439.0
+offset_top = -99.0
+offset_right = 647.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.400001, 0.400001)
-texture_normal = ExtResource("3_wgy0u")
+theme_override_font_sizes/font_size = 40
+text = "Back"
 
 [node name="Rocket" type="Sprite2D" parent="."]
 position = Vector2(821, 161)
