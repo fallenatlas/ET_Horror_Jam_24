@@ -21,7 +21,7 @@
 [ext_resource type="Script" path="res://scripts/objects/interactable_object.gd" id="13_qe8b8"]
 [ext_resource type="Resource" uid="uid://dml2o7hixfyje" path="res://custom_resources/objects/metal.tres" id="14_b66h2"]
 [ext_resource type="Resource" uid="uid://q0n6crqn0ohn" path="res://custom_resources/objects/ct/CTNewspaper.tres" id="14_g61dm"]
-[ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="14_i2d2n"]
+[ext_resource type="PackedScene" uid="uid://ce4efle10qkg5" path="res://scenes/menus/pause_menu.tscn" id="14_i2d2n"]
 [ext_resource type="Resource" uid="uid://camt4h12tnols" path="res://custom_resources/objects/scales.tres" id="14_o8xl0"]
 [ext_resource type="Resource" uid="uid://cylcj3rcton0u" path="res://custom_resources/objects/ct/CTOvniPhoto.tres" id="15_fw43f"]
 [ext_resource type="Resource" uid="uid://i6u3cnt1lprh" path="res://custom_resources/objects/karen/karenFur.tres" id="16_nj0dn"]
